@@ -4,11 +4,14 @@
 
 ## Сайт
 
-Това е статичен сайт, изграден от архив на първоначалния design-code.bg, адаптиран към текущите нужди на бизнеса.
+Това е статичен сайт, възстановен от архив на design-code.bg, адаптиран към текущите нужди на бизнеса.
 
-## GitHub Pages
+## Хостинг
 
-Сайтът се хоства автоматично чрез GitHub Pages:
+Сайтът се хоства на **Vercel**:
+https://design-code-blush.vercel.app
+
+GitHub Pages е включен, но в момента има проблеми с build процеса:
 https://vstrenev-png.github.io/design-code/
 
 ## Структура
@@ -22,4 +25,7 @@ https://vstrenev-png.github.io/design-code/
 
 ## Разработка
 
-Сайтът е статичен HTML/CSS/JS. Няма build система. Промените се правят директно във файловете и се публикуват чрез GitHub Pages при push към `main` branch.
+Сайтът е статичен HTML/CSS/JS. Няма build система. Промените се правят директно във файловете и се публикуват чрез push към `main` branch.
+
+За автоматичен деплой към Vercel свържи repo-то от:
+https://vercel.com/vstrenev-pngs-projects/design-code/settings/git
