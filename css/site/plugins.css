@@ -1,0 +1,48 @@
+/*=========================
+	All css
+==========================*/
+@import url("../../plugins/bootstrap/css/bootstrap.min.css");
+@import url("../../plugins/fontawesome/css/font-awesome.min.css");
+@import url("../../plugins/line-awesome/css/line-awesome.min.css");
+@import url("../../plugins/themify/themify-icons.css");
+@import url("../../plugins/flaticon/flaticon.css");
+@import url("../../plugins/owl-carousel/owl.carousel.css");
+@import url("../../plugins/bootstrap-select/bootstrap-select.min.css");
+@import url("../../plugins/animate/animate.css");
+@import url("../../plugins/magnific-popup/magnific-popup.css");
+@import url("../../plugins/scroll/scrollbar.css");
+
+/*=========================
+	All css
+==========================*/
+ /*@import url('//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700|'Venus Rising Cyrillic':100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|'Venus Rising Cyrillic':100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');*/
+
+@import url('//allfont.net/allfont.css?fonts=venus-rising-cyrillic');
+
+/* 
+    font-family: 'Venus Rising Cyrillic', sans-serif;
+    font-family: 'Venus Rising Cyrillic', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+*/
+/*
+     FILE ARCHIVED ON 08:01:40 Jan 13, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 16:31:54 Aug 06, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.402
+  exclusion.robots: 0.034
+  exclusion.robots.policy: 0.025
+  esindex: 0.007
+  cdx.remote: 27.497
+  LoadShardBlock: 88.271 (3)
+  PetaboxLoader3.datanode: 61.636 (4)
+  PetaboxLoader3.resolve: 85.487 (2)
+  load_resource: 90.537
+*/
