@@ -1,10 +1,62 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+const siteDir = process.cwd();
+const projectsDir = path.join(siteDir, 'project');
+
+// Get original project order from git history
+const originalHomepage = execSync('git show main:index.html', { encoding: 'utf8', cwd: siteDir });
+
+// Group images by timestamp prefix
+function groupByTimestamp(dir) {
+    const files = fs.readdirSync(dir).filter(f => /\.(jpg|jpeg|png)$/i.test(f));
+    const groups = {};
+    for (const f of files) {
+        const match = f.match(/^(\d{7})/);
+        if (match) {
+            const prefix = match[1];
+            if (!groups[prefix]) groups[prefix] = [];
+            groups[prefix].push(f);
+        }
+    }
+    return groups;
+}
+
+const groups480 = groupByTimestamp(path.join(siteDir, 'images', 'projects', '480x475'));
+
+// Get project order from original homepage
+const projectOrder = [];
+const re = /href="project\/([^/"]+)\/index\.html"/g;
+let m;
+while ((m = re.exec(originalHomepage)) !== null) {
+    if (!projectOrder.includes(m[1])) projectOrder.push(m[1]);
+}
+
+// Match groups to projects
+const prefixes = Object.keys(groups480).sort();
+const projectImages = {};
+for (let i = 0; i < projectOrder.length && i < prefixes.length; i++) {
+    const project = projectOrder[i];
+    const prefix = prefixes[i];
+    const images480 = groups480[prefix] || [];
+    projectImages[project] = {
+        thumb: images480[0] ? `../../images/projects/480x475/${images480[0]}` : null,
+        gallery: images480.map(f => `../../images/projects/480x475/${f}`)
+    };
+}
+
+function titleFromDir(dirName) {
+    return dirName.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+const template = (title, data) => `<!DOCTYPE html>
 <html lang="bg">
 <head>
     <meta charset="utf-8">
-    <title>Tropical Paradise - Design-Code</title>
-    <meta name="title" content="Design-Code - Tropical Paradise">
-    <meta name="description" content="Интериорен дизайн и мебели по проект Tropical Paradise.">
+    <title>${title} - Design-Code</title>
+    <meta name="title" content="Design-Code - ${title}">
+    <meta name="description" content="Интериорен дизайн и мебели по проект ${title}.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../css/site/plugins.css" media="screen" rel="stylesheet" type="text/css">
     <link href="../../css/site/style.css" media="screen" rel="stylesheet" type="text/css">
@@ -120,56 +172,38 @@
         </nav>
     </div>
 
-    
+    ${data.gallery.length > 0 ? `
     <!-- Full Width Slider -->
     <div class="project-slider">
-        
-        <div class="slide active">
-            <img src="../../images/projects/480x475/1622656420_60b7c5a49e28d5_53867865.JPG" alt="Tropical Paradise">
-            
+        ${data.gallery.map((img, i) => `
+        <div class="slide${i === 0 ? ' active' : ''}">
+            <img src="${img}" alt="${title}">
+            ${i === 0 ? `
             <div class="slide-overlay">
-                <h2>Tropical Paradise</h2>
-                <p>Интериорен дизайн и мебели по проект Tropical Paradise</p>
-            </div>
-        </div>
-        <div class="slide">
-            <img src="../../images/projects/480x475/1622656423_60b7c5a718f365_32706835.JPG" alt="Tropical Paradise">
-            
-        </div>
-        <div class="slide">
-            <img src="../../images/projects/480x475/1622656425_60b7c5a97269b9_77139309.JPG" alt="Tropical Paradise">
-            
-        </div>
-        <div class="slide">
-            <img src="../../images/projects/480x475/1622656427_60b7c5abf09434_35717212.JPG" alt="Tropical Paradise">
-            
-        </div>
+                <h2>${title}</h2>
+                <p>Интериорен дизайн и мебели по проект ${title}</p>
+            </div>` : ''}
+        </div>`).join('')}
         <div class="slider-nav">
             <button class="prev" aria-label="Предишна снимка">←</button>
             <button class="next" aria-label="Следваща снимка">→</button>
         </div>
         <div class="slider-dots">
-            <div class="dot active" data-slide="0"></div><div class="dot" data-slide="1"></div><div class="dot" data-slide="2"></div><div class="dot" data-slide="3"></div>
+            ${data.gallery.map((_, i) => `<div class="dot${i === 0 ? ' active' : ''}" data-slide="${i}"></div>`).join('')}
         </div>
-    </div>
+    </div>` : ''}
 
     <div class="page-wraper">
         <div class="page-content">
             <div class="section-full content-inner">
                 <div class="container">
-                    
+                    ${data.gallery.length > 1 ? `
                     <div class="project-gallery">
-                        
+                        ${data.gallery.slice(1).map(img => `
                         <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622656423_60b7c5a718f365_32706835.JPG" alt="Tropical Paradise">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622656425_60b7c5a97269b9_77139309.JPG" alt="Tropical Paradise">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622656427_60b7c5abf09434_35717212.JPG" alt="Tropical Paradise">
-                        </div>
-                    </div>
+                            <img src="${img}" alt="${title}">
+                        </div>`).join('')}
+                    </div>` : ''}
                     <div class="row">
                         <div class="col-lg-12">
                             <a href="../../projects/index.html" class="project-back-link">
@@ -203,4 +237,19 @@
     <script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../js/project.js"></script>
 </body>
-</html>
+</html>`;
+
+const projects = fs.readdirSync(projectsDir, { withFileTypes: true })
+    .filter(d => d.isDirectory())
+    .map(d => d.name);
+
+for (const project of projects) {
+    const projectDir = path.join(projectsDir, project);
+    const indexPath = path.join(projectDir, 'index.html');
+    const title = titleFromDir(project);
+    const data = projectImages[project] || { thumb: null, gallery: [] };
+    fs.writeFileSync(indexPath, template(title, data));
+    console.log(`Created ${indexPath} with ${data.gallery.length} images`);
+}
+
+console.log(`Done. Created ${projects.length} project pages.`);
