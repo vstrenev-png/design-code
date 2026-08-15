@@ -3,6 +3,18 @@
     const slider = document.querySelector('.project-slider');
     if (!slider) return;
 
+    // Make slider full width
+    function setFullWidth() {
+        slider.style.width = window.innerWidth + 'px';
+        slider.style.marginLeft = '0';
+        slider.style.marginRight = '0';
+        slider.style.left = '0';
+        slider.style.right = '0';
+    }
+
+    setFullWidth();
+    window.addEventListener('resize', setFullWidth);
+
     const slides = slider.querySelectorAll('.slide');
     const dots = slider.querySelectorAll('.slider-dots .dot');
     const prevBtn = slider.querySelector('.slider-nav .prev');
