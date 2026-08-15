@@ -56,8 +56,6 @@
         body {
             padding-top: 70px;
         }
-
-        /* Mobile Menu Overlay */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -122,68 +120,13 @@
         </nav>
     </div>
 
+    
+
     <div class="page-wraper">
         <div class="page-content">
-            
-            <div class="project-slider">
-                
-                <div class="slide active">
-                    <img src="../../images/projects/480x475/1622658981_60b7cfa6072420_77030601.JPG" alt="Arizona Dream">
-                    
-                    <div class="slide-overlay">
-                        <h2>Arizona Dream</h2>
-                        <p>Интериорен дизайн и мебели по проект Arizona Dream</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622658984_60b7cfa87515a5_74790588.JPG" alt="Arizona Dream">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622658986_60b7cfaac389a5_82640392.JPG" alt="Arizona Dream">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622658989_60b7cfad263262_62545469.JPG" alt="Arizona Dream">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622658991_60b7cfaf72b793_05871686.JPG" alt="Arizona Dream">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622658993_60b7cfb1be4fb4_84435843.JPG" alt="Arizona Dream">
-                    
-                </div>
-                <div class="slider-nav">
-                    <button class="prev" aria-label="Предишна снимка">←</button>
-                    <button class="next" aria-label="Следваща снимка">→</button>
-                </div>
-                <div class="slider-dots">
-                    <div class="dot active" data-slide="0"></div><div class="dot" data-slide="1"></div><div class="dot" data-slide="2"></div><div class="dot" data-slide="3"></div><div class="dot" data-slide="4"></div><div class="dot" data-slide="5"></div>
-                </div>
-            </div>
             <div class="section-full content-inner">
                 <div class="container">
                     
-                    <div class="project-gallery">
-                        
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622658984_60b7cfa87515a5_74790588.JPG" alt="Arizona Dream">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622658986_60b7cfaac389a5_82640392.JPG" alt="Arizona Dream">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622658989_60b7cfad263262_62545469.JPG" alt="Arizona Dream">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622658991_60b7cfaf72b793_05871686.JPG" alt="Arizona Dream">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622658993_60b7cfb1be4fb4_84435843.JPG" alt="Arizona Dream">
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <a href="../../projects/index.html" class="project-back-link">
@@ -197,7 +140,6 @@
     </div>
 
     <script>
-        // Mobile menu toggle
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -206,7 +148,6 @@
             mobileMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking on a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuBtn.classList.remove('active');

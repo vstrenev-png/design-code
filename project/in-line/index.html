@@ -56,8 +56,6 @@
         body {
             padding-top: 70px;
         }
-
-        /* Mobile Menu Overlay */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -122,82 +120,13 @@
         </nav>
     </div>
 
+    
+
     <div class="page-wraper">
         <div class="page-content">
-            
-            <div class="project-slider">
-                
-                <div class="slide active">
-                    <img src="../../images/projects/480x475/1590692494_5ed00a8e91cce8_89922559.JPG" alt="In Line">
-                    
-                    <div class="slide-overlay">
-                        <h2>In Line</h2>
-                        <p>Интериорен дизайн и мебели по проект In Line</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590692499_5ed00a93f19f47_96618156.jpg" alt="In Line">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590692502_5ed00a965951b3_02149339.jpg" alt="In Line">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590692503_5ed00a976a7bf4_38215460.jpg" alt="In Line">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590692511_5ed00a9f239349_93094368.jpg" alt="In Line">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590692512_5ed00aa028ce92_56749515.jpg" alt="In Line">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590692517_5ed00aa5808c63_59418144.jpg" alt="In Line">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590692518_5ed00aa6a6c821_14373064.jpg" alt="In Line">
-                    
-                </div>
-                <div class="slider-nav">
-                    <button class="prev" aria-label="Предишна снимка">←</button>
-                    <button class="next" aria-label="Следваща снимка">→</button>
-                </div>
-                <div class="slider-dots">
-                    <div class="dot active" data-slide="0"></div><div class="dot" data-slide="1"></div><div class="dot" data-slide="2"></div><div class="dot" data-slide="3"></div><div class="dot" data-slide="4"></div><div class="dot" data-slide="5"></div><div class="dot" data-slide="6"></div><div class="dot" data-slide="7"></div>
-                </div>
-            </div>
             <div class="section-full content-inner">
                 <div class="container">
                     
-                    <div class="project-gallery">
-                        
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590692499_5ed00a93f19f47_96618156.jpg" alt="In Line">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590692502_5ed00a965951b3_02149339.jpg" alt="In Line">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590692503_5ed00a976a7bf4_38215460.jpg" alt="In Line">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590692511_5ed00a9f239349_93094368.jpg" alt="In Line">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590692512_5ed00aa028ce92_56749515.jpg" alt="In Line">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590692517_5ed00aa5808c63_59418144.jpg" alt="In Line">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590692518_5ed00aa6a6c821_14373064.jpg" alt="In Line">
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <a href="../../projects/index.html" class="project-back-link">
@@ -211,7 +140,6 @@
     </div>
 
     <script>
-        // Mobile menu toggle
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -220,7 +148,6 @@
             mobileMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking on a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuBtn.classList.remove('active');

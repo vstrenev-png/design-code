@@ -56,8 +56,6 @@
         body {
             padding-top: 70px;
         }
-
-        /* Mobile Menu Overlay */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -122,54 +120,13 @@
         </nav>
     </div>
 
+    
+
     <div class="page-wraper">
         <div class="page-content">
-            
-            <div class="project-slider">
-                
-                <div class="slide active">
-                    <img src="../../images/projects/480x475/1590695445_5ed016158a8815_91811942.jpg" alt="Gold Fish">
-                    
-                    <div class="slide-overlay">
-                        <h2>Gold Fish</h2>
-                        <p>Интериорен дизайн и мебели по проект Gold Fish</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590695446_5ed0161659cdb1_17353983.jpg" alt="Gold Fish">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590695446_5ed0161704ff26_02477740.jpg" alt="Gold Fish">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590695555_5ed01683d2c1f3_47834355.jpg" alt="Gold Fish">
-                    
-                </div>
-                <div class="slider-nav">
-                    <button class="prev" aria-label="Предишна снимка">←</button>
-                    <button class="next" aria-label="Следваща снимка">→</button>
-                </div>
-                <div class="slider-dots">
-                    <div class="dot active" data-slide="0"></div><div class="dot" data-slide="1"></div><div class="dot" data-slide="2"></div><div class="dot" data-slide="3"></div>
-                </div>
-            </div>
             <div class="section-full content-inner">
                 <div class="container">
                     
-                    <div class="project-gallery">
-                        
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590695446_5ed0161659cdb1_17353983.jpg" alt="Gold Fish">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590695446_5ed0161704ff26_02477740.jpg" alt="Gold Fish">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590695555_5ed01683d2c1f3_47834355.jpg" alt="Gold Fish">
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <a href="../../projects/index.html" class="project-back-link">
@@ -183,7 +140,6 @@
     </div>
 
     <script>
-        // Mobile menu toggle
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -192,7 +148,6 @@
             mobileMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking on a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuBtn.classList.remove('active');

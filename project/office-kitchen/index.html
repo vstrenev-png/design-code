@@ -56,8 +56,6 @@
         body {
             padding-top: 70px;
         }
-
-        /* Mobile Menu Overlay */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -122,82 +120,13 @@
         </nav>
     </div>
 
+    
+
     <div class="page-wraper">
         <div class="page-content">
-            
-            <div class="project-slider">
-                
-                <div class="slide active">
-                    <img src="../../images/projects/480x475/1590953236_5ed4051474c436_81701474.jpg" alt="Office Kitchen">
-                    
-                    <div class="slide-overlay">
-                        <h2>Office Kitchen</h2>
-                        <p>Интериорен дизайн и мебели по проект Office Kitchen</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590953237_5ed40515b62562_51906143.jpg" alt="Office Kitchen">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590953239_5ed405177f56b4_90869721.jpg" alt="Office Kitchen">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590953241_5ed4051937a6f3_43163670.jpg" alt="Office Kitchen">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590953242_5ed4051ae01a05_82532132.jpg" alt="Office Kitchen">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590953248_5ed405204427f2_56205460.jpg" alt="Office Kitchen">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590953249_5ed40521cc0922_26640917.jpg" alt="Office Kitchen">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1590953251_5ed40524091460_71547181.jpg" alt="Office Kitchen">
-                    
-                </div>
-                <div class="slider-nav">
-                    <button class="prev" aria-label="Предишна снимка">←</button>
-                    <button class="next" aria-label="Следваща снимка">→</button>
-                </div>
-                <div class="slider-dots">
-                    <div class="dot active" data-slide="0"></div><div class="dot" data-slide="1"></div><div class="dot" data-slide="2"></div><div class="dot" data-slide="3"></div><div class="dot" data-slide="4"></div><div class="dot" data-slide="5"></div><div class="dot" data-slide="6"></div><div class="dot" data-slide="7"></div>
-                </div>
-            </div>
             <div class="section-full content-inner">
                 <div class="container">
                     
-                    <div class="project-gallery">
-                        
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590953237_5ed40515b62562_51906143.jpg" alt="Office Kitchen">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590953239_5ed405177f56b4_90869721.jpg" alt="Office Kitchen">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590953241_5ed4051937a6f3_43163670.jpg" alt="Office Kitchen">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590953242_5ed4051ae01a05_82532132.jpg" alt="Office Kitchen">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590953248_5ed405204427f2_56205460.jpg" alt="Office Kitchen">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590953249_5ed40521cc0922_26640917.jpg" alt="Office Kitchen">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1590953251_5ed40524091460_71547181.jpg" alt="Office Kitchen">
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <a href="../../projects/index.html" class="project-back-link">
@@ -211,7 +140,6 @@
     </div>
 
     <script>
-        // Mobile menu toggle
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -220,7 +148,6 @@
             mobileMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking on a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuBtn.classList.remove('active');

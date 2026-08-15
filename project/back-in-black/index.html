@@ -56,8 +56,6 @@
         body {
             padding-top: 70px;
         }
-
-        /* Mobile Menu Overlay */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -122,96 +120,13 @@
         </nav>
     </div>
 
+    
+
     <div class="page-wraper">
         <div class="page-content">
-            
-            <div class="project-slider">
-                
-                <div class="slide active">
-                    <img src="../../images/projects/480x475/1622659050_60b7cfea564b19_85923733.JPG" alt="Back In Black">
-                    
-                    <div class="slide-overlay">
-                        <h2>Back In Black</h2>
-                        <p>Интериорен дизайн и мебели по проект Back In Black</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622659052_60b7cfecbc05c6_76803584.JPG" alt="Back In Black">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622659055_60b7cfef1516e3_82109425.JPG" alt="Back In Black">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622659057_60b7cff15a8a86_94420010.JPG" alt="Back In Black">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622659059_60b7cff3b8bd78_12216828.JPG" alt="Back In Black">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622659062_60b7cff61ff640_50430203.JPG" alt="Back In Black">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622659389_60b7d13da7ce52_00942914.jpg" alt="Back In Black">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622659391_60b7d1401050c0_74772962.jpg" alt="Back In Black">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622659392_60b7d14081afc0_65883336.jpg" alt="Back In Black">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1622659393_60b7d1416e1095_26781127.jpg" alt="Back In Black">
-                    
-                </div>
-                <div class="slider-nav">
-                    <button class="prev" aria-label="Предишна снимка">←</button>
-                    <button class="next" aria-label="Следваща снимка">→</button>
-                </div>
-                <div class="slider-dots">
-                    <div class="dot active" data-slide="0"></div><div class="dot" data-slide="1"></div><div class="dot" data-slide="2"></div><div class="dot" data-slide="3"></div><div class="dot" data-slide="4"></div><div class="dot" data-slide="5"></div><div class="dot" data-slide="6"></div><div class="dot" data-slide="7"></div><div class="dot" data-slide="8"></div><div class="dot" data-slide="9"></div>
-                </div>
-            </div>
             <div class="section-full content-inner">
                 <div class="container">
                     
-                    <div class="project-gallery">
-                        
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622659052_60b7cfecbc05c6_76803584.JPG" alt="Back In Black">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622659055_60b7cfef1516e3_82109425.JPG" alt="Back In Black">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622659057_60b7cff15a8a86_94420010.JPG" alt="Back In Black">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622659059_60b7cff3b8bd78_12216828.JPG" alt="Back In Black">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622659062_60b7cff61ff640_50430203.JPG" alt="Back In Black">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622659389_60b7d13da7ce52_00942914.jpg" alt="Back In Black">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622659391_60b7d1401050c0_74772962.jpg" alt="Back In Black">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622659392_60b7d14081afc0_65883336.jpg" alt="Back In Black">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1622659393_60b7d1416e1095_26781127.jpg" alt="Back In Black">
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <a href="../../projects/index.html" class="project-back-link">
@@ -225,7 +140,6 @@
     </div>
 
     <script>
-        // Mobile menu toggle
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -234,7 +148,6 @@
             mobileMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking on a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuBtn.classList.remove('active');

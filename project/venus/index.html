@@ -56,8 +56,6 @@
         body {
             padding-top: 70px;
         }
-
-        /* Mobile Menu Overlay */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -122,110 +120,13 @@
         </nav>
     </div>
 
+    
+
     <div class="page-wraper">
         <div class="page-content">
-            
-            <div class="project-slider">
-                
-                <div class="slide active">
-                    <img src="../../images/projects/480x475/1623093277_60be701dbce212_66506526.jpg" alt="Venus">
-                    
-                    <div class="slide-overlay">
-                        <h2>Venus</h2>
-                        <p>Интериорен дизайн и мебели по проект Venus</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1623093277_60be701e0dfa08_94372077.jpg" alt="Venus">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1623093278_60be701e6569e4_71114747.jpg" alt="Venus">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1623093278_60be701eb66cf1_46969587.jpg" alt="Venus">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1623093278_60be701f3c2132_45386145.jpg" alt="Venus">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1623093279_60be701fe8b422_79586041.jpg" alt="Venus">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1623093280_60be7020392251_59587605.jpg" alt="Venus">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1623093280_60be7020a931d8_97091515.jpg" alt="Venus">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1623093280_60be70210b30e9_05284005.jpg" alt="Venus">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1623093281_60be7021483652_15639244.jpg" alt="Venus">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1623093281_60be702195bb23_75535857.jpg" alt="Venus">
-                    
-                </div>
-                <div class="slide">
-                    <img src="../../images/projects/480x475/1623093281_60be7021dba3b7_28136710.jpg" alt="Venus">
-                    
-                </div>
-                <div class="slider-nav">
-                    <button class="prev" aria-label="Предишна снимка">←</button>
-                    <button class="next" aria-label="Следваща снимка">→</button>
-                </div>
-                <div class="slider-dots">
-                    <div class="dot active" data-slide="0"></div><div class="dot" data-slide="1"></div><div class="dot" data-slide="2"></div><div class="dot" data-slide="3"></div><div class="dot" data-slide="4"></div><div class="dot" data-slide="5"></div><div class="dot" data-slide="6"></div><div class="dot" data-slide="7"></div><div class="dot" data-slide="8"></div><div class="dot" data-slide="9"></div><div class="dot" data-slide="10"></div><div class="dot" data-slide="11"></div>
-                </div>
-            </div>
             <div class="section-full content-inner">
                 <div class="container">
                     
-                    <div class="project-gallery">
-                        
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1623093277_60be701e0dfa08_94372077.jpg" alt="Venus">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1623093278_60be701e6569e4_71114747.jpg" alt="Venus">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1623093278_60be701eb66cf1_46969587.jpg" alt="Venus">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1623093278_60be701f3c2132_45386145.jpg" alt="Venus">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1623093279_60be701fe8b422_79586041.jpg" alt="Venus">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1623093280_60be7020392251_59587605.jpg" alt="Venus">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1623093280_60be7020a931d8_97091515.jpg" alt="Venus">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1623093280_60be70210b30e9_05284005.jpg" alt="Venus">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1623093281_60be7021483652_15639244.jpg" alt="Venus">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1623093281_60be702195bb23_75535857.jpg" alt="Venus">
-                        </div>
-                        <div class="project-gallery-item">
-                            <img src="../../images/projects/480x475/1623093281_60be7021dba3b7_28136710.jpg" alt="Venus">
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <a href="../../projects/index.html" class="project-back-link">
@@ -239,7 +140,6 @@
     </div>
 
     <script>
-        // Mobile menu toggle
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -248,7 +148,6 @@
             mobileMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking on a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuBtn.classList.remove('active');

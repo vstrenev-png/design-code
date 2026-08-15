@@ -56,8 +56,6 @@
         body {
             padding-top: 70px;
         }
-
-        /* Mobile Menu Overlay */
         .mobile-menu-overlay {
             position: fixed;
             top: 0;
@@ -122,19 +120,10 @@
         </nav>
     </div>
 
+    
+
     <div class="page-wraper">
         <div class="page-content">
-            
-            <div class="section-full content-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h2 class="text-uppercase">Sofia Land Residence</h2>
-                            <p class="m-b30">Интериорен дизайн и мебели по проект Sofia Land Residence.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="section-full content-inner">
                 <div class="container">
                     
@@ -151,7 +140,6 @@
     </div>
 
     <script>
-        // Mobile menu toggle
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -160,7 +148,6 @@
             mobileMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking on a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuBtn.classList.remove('active');
