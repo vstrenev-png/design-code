@@ -1,11 +1,13 @@
 /* Project slider - elegant design inspired by original site */
 .project-slider {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 70vh;
     min-height: 500px;
     overflow: hidden;
     margin-bottom: 40px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
 }
 
 .project-slider .slide {
