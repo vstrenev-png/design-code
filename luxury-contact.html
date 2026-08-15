@@ -2,8 +2,8 @@
 <html lang="bg">
 <head>
     <meta charset="utf-8">
-    <title>За нас — Design-Code</title>
-    <meta name="description" content="Научете повече за нашата философия и подход към интериорния дизайн.">
+    <title>Контакти — Design-Code</title>
+    <meta name="description" content="Свържете се с нас за безплатна консултация по вашия интериорен проект.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link href="css/luxury.css" rel="stylesheet" type="text/css">
@@ -91,19 +91,64 @@
         .mobile-menu-overlay nav a:hover {
             color: #8dc63f;
         }
-        .about-content {
-            max-width: 800px;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
             margin: 0 auto;
-            line-height: 1.9;
-            font-size: 1.1em;
-            color: var(--text-muted);
         }
-        .about-content h3 {
+        .contact-info {
+            background: var(--dark-bg-card);
+            border: 1px solid var(--border-subtle);
+            padding: 40px;
+            text-align: center;
+        }
+        .contact-info h3 {
             color: var(--primary-green);
             font-weight: 300;
             letter-spacing: 2px;
-            margin-top: 40px;
             margin-bottom: 20px;
+        }
+        .contact-info p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 60px auto 0;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: var(--dark-bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-light);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 18px;
+            background: transparent;
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        .contact-form button:hover {
+            background: var(--primary-green);
+            color: var(--dark-bg);
         }
     </style>
 </head>
@@ -111,7 +156,7 @@
 
     <!-- Header Bar -->
     <header class="luxury-header-bar">
-        <a href="index.html">
+        <a href="luxury-index.html">
             <img src="images/site/logo-white.png" alt="Design-Code" class="logo">
         </a>
         <button class="menu-btn" aria-label="Menu" id="menuBtn">
@@ -124,29 +169,42 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenu">
         <nav>
-            <a href="index.html">Начало</a>
-            <a href="projects/index.html">Проекти</a>
-            <a href="about-us/index.html">За нас</a>
-            <a href="contact-us/index.html">Контакти</a>
+            <a href="luxury-index.html">Начало</a>
+            <a href="luxury-projects.html">Проекти</a>
+            <a href="luxury-about.html">За нас</a>
+            <a href="luxury-contact.html">Контакти</a>
         </nav>
     </div>
 
-    <!-- About Section -->
+    <!-- Contact Section -->
     <section class="luxury-section">
         <div class="container">
-            <h2 class="luxury-section-title">За нас</h2>
-            <div class="about-content">
-                <p>Design-Code е студио за интериорен дизайн, създадено с една мисия — да превръщаме пространствата в преживявания. Вярваме, че добрият дизайн не е просто красота, а съчетание от функционалност, естетика и внимание към детайла.</p>
-
-                <h3>Нашата история</h3>
-                <p>Започнахме през 2010 година с малък екип от ентусиасти, обединени от страстта към красивите интериори. През годините израснахме в екип от професионалисти, които работят по проекти от всякакъв мащаб — от малки апартаменти до големи жилищни и търговски пространства.</p>
-
-                <h3>Нашият подход</h3>
-                <p>Всеки проект започва с разговор. Искаме да разберем вашите нужди, мечти и начин на живот. След това създаваме концепция, която отразява вашата индивидуалност. Работим в тясно сътрудничество с вас през целия процес — от първата скица до последния детайл.</p>
-
-                <h3>Нашият екип</h3>
-                <p>Екипът ни се състои от архитекти, дизайнери и майстори, които споделят една обща цел — създаване на пространства, които вдъхновяват. Непрекъснато следим за нови тенденции и технологии в дизайна, за да предлагаме най-доброто на нашите клиенти.</p>
+            <h2 class="luxury-section-title">Свържете се с нас</h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 60px;">
+                Имате въпроси или искате да обсъдим вашия проект? Ние сме тук, за да помогнем.
+            </p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Адрес</h3>
+                    <p>гр. София, България<br>ул. Примерна 123</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Телефон</h3>
+                    <p>+359 888 123 456<br>+359 888 654 321</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Имейл</h3>
+                    <p>info@design-code.bg<br>office@design-code.bg</p>
+                </div>
             </div>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Вашето име" required>
+                <input type="email" placeholder="Вашият имейл" required>
+                <input type="tel" placeholder="Вашият телефон">
+                <textarea rows="5" placeholder="Вашето съобщение" required></textarea>
+                <button type="submit">Изпрати съобщение</button>
+            </form>
         </div>
     </section>
 
@@ -159,10 +217,10 @@
             </div>
             <div>
                 <h4>Навигация</h4>
-                <p><a href="index.html">Начало</a></p>
-                <p><a href="projects/index.html">Проекти</a></p>
-                <p><a href="about-us/index.html">За нас</a></p>
-                <p><a href="contact-us/index.html">Контакти</a></p>
+                <p><a href="luxury-index.html">Начало</a></p>
+                <p><a href="luxury-projects.html">Проекти</a></p>
+                <p><a href="luxury-about.html">За нас</a></p>
+                <p><a href="luxury-contact.html">Контакти</a></p>
             </div>
             <div>
                 <h4>Контакти</h4>

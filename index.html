@@ -1,847 +1,257 @@
-<!DOCTYPE html><html lang="bg">
-    <head>
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8">
+    <title>Design-Code — Луксозен интериорен дизайн</title>
+    <meta name="description" content="Създаваме изключителни интериорни пространства с внимание към детайла и страст към дизайна.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="css/luxury.css" rel="stylesheet" type="text/css">
+    <style>
+        .luxury-header-bar {
+            background: #1a1a1a;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .luxury-header-bar .logo {
+            max-height: 40px;
+        }
+        .luxury-header-bar .menu-btn {
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 6px;
+        }
+        .luxury-header-bar .menu-btn span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        .luxury-header-bar .menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .luxury-header-bar .menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .luxury-header-bar .menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        body {
+            padding-top: 70px;
+        }
 
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 26, 26, 0.98);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .mobile-menu-overlay nav {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+        .mobile-menu-overlay nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+        .mobile-menu-overlay nav a:hover {
+            color: #8dc63f;
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Header Bar -->
+    <header class="luxury-header-bar">
+        <a href="index.html">
+            <img src="images/site/logo-white.png" alt="Design-Code" class="logo">
+        </a>
+        <button class="menu-btn" aria-label="Menu" id="menuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
 
-
-
-
-
-
-        <meta charset="utf-8">
-        <title>НАЧАЛО - Design-Code</title>        <meta name="title" content="Design-Code -  Интериорен дизайн">
-<meta name="description" content="Креативност и функционалност">
-<meta name="keywords" content="интериорен, дизайн, мебели, разкрой, design, code, furniture">
-<meta property="og:title" content="Design-Code -  Интериорен дизайн">
-<meta property="og:description" content="Креативност и функционалност">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/">
-<meta property="og:image" content="images/site/share.png">
-<meta property="fb:app_id" content="3104413462973670">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- Style Sheet Includes -->
-        <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
-<link href="css/site/plugins.css" media="screen" rel="stylesheet" type="text/css">
-<link href="css/site/style.css" media="screen" rel="stylesheet" type="text/css">
-<link href="css/site/templete.css" media="screen" rel="stylesheet" type="text/css">
-<link href="css/site/images-compare.css" media="screen" rel="stylesheet" type="text/css">
-<link href="css/site/skin/skin-1.css" media="screen" rel="stylesheet" type="text/css">
-<link href="plugins/revolution/revolution/css/layers.css" media="screen" rel="stylesheet" type="text/css">
-<link href="plugins/revolution/revolution/css/settings.css" media="screen" rel="stylesheet" type="text/css">
-<link href="plugins/revolution/revolution/css/navigation.css" media="screen" rel="stylesheet" type="text/css">    </head>
-    <body class="site-home">
-        <div class="page-wraper">
-            <div id="loading-area"></div>
-            <!-- header -->
-            <header class="site-header header-transparent mo-left">
-                <!-- main header -->
-                <div class="sticky-header main-bar-wraper navbar-expand-lg">
-                    <div class="main-bar clearfix ">
-                        <div class="container clearfix">
-                            <!-- website logo -->
-                            <div class="logo-header mostion">
-                                <a href="index.html"><img src="images/site/logo-white.png" alt=""></a>
-                            </div>
-                            <!-- nav toggle button -->
-                            <button class="navbar-toggler collapsed navicon justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
-                            <!-- main nav -->
-                            <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
-                                <div class="logo-header">
-                                    <a href="index.html"><img src="images/site/logo.png" alt=""></a>
-                                </div>
-                                <ul class="nav navbar-nav">
-    <li class="active">
-        <a href="index.html">НАЧАЛО</a>
-    </li>
-    <li>
-        <a href="projects/index.html">ПРОЕКТИ</a>
-    </li>
-    <li>
-        <a href="about-us/index.html">ЗА НАС</a>
-    </li>
-    <li>
-        <a href="questions-and-answers/index.html">ПРЕПОРЪКИ</a>
-    </li>
-    <li>
-        <a href="contact-us/index.html">КОНТАКТИ</a>
-    </li>
-</ul>                                                                    <div class="extra-nav pl-3">
-                                                                                                                                                                            <a href="index.html">en</a>
-                                                                                                                                        <span> | </span>
-                                                                                                                                                                                <span>bg</span>
-                                                                                                                                                                    </div>
-                                                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- main header END -->
-            </header>
-            <!-- header END -->
-            <!-- Content -->
-            <div class="page-content bg-white">
-                
-<!--SEO-->
-
-
-<!-- Slider -->
-<div class="main-slider style-two default-banner" id="home">
-    <div class="tp-banner-container">
-        <div class="tp-banner">
-            <div id="welcome_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="reveal-add-on36" data-source="gallery" style="background:#ffffff;padding:0px;">
-    <!-- START REVOLUTION SLIDER 5.4.7.2 fullscreen mode -->
-    <div id="welcome" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.7.2">
-        <ul>	<!-- SLIDE  -->
-                            <li data-index="rs-100" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="images/site/main-slider/dummy.png" alt="" data-lazyload="images/sliders/1920x898/1666018745_634d6db9a57194_74539253.jpg" data-bgposition="center center" data-kenburns="on" data-duration="4000" data-ease="Power3.easeInOut" data-scalestart="150" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption tp-shape tp-shapewrapper ov-tp " id="slide-100-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power4.easeIn&quot;}]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;font-family:Open Sans;"></div>
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption  " id="slide-100-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-80','-70','-70']" data-fontsize="['32','32','20','12']" data-lineheight="['45','40','35','30']" data-letterspacing="['0','0','0','0']" data-width="['1000','none','768','360']" data-height="none" data-whitespace="['normal','nowrap','normal','normal']" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]" data-textalign="['center','left','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 800px; max-width: 800px; font-weight: 700; white-space: normal; color: #ffffff; font-family: 'Venus Rising Cyrillic';">
-                        DC-1-MINIMALISTIC                    </div>
-                    <!-- LAYER NR. 3 -->
-                                        <!-- LAYER NR. 5 -->
-                                            <a class="tp-caption rev-btn tc-btnshadow" href="project/in-line/index.html" target="_blank" id="slide-100-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['140','140','100','170']" data-lineheight="['60','60','50','50']" data-width="['280','280','280','180']" data-height="none" data-whitespace="nowrap" data-type="button" data-actions="" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;fbr:100;&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;o:1;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;opacity:0;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;frame&quot;:&quot;hover&quot;,&quot;speed&quot;:&quot;150&quot;,&quot;ease&quot;:&quot;Power1.easeInOut&quot;,&quot;to&quot;:&quot;o:1;rX:0;rY:0;rZ:0;z:0;fbr:90%;&quot;,&quot;style&quot;:&quot;c:rgba(255,255,255,0.8);&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[30,30,20,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[30,30,20,20]" style="z-index: 9; min-width: 280px; max-width: 280px; letter-spacing: 2px; white-space: nowrap; font-size: 11px; line-height: 20px; font-weight: 600; color: #fff; font-family: 'Venus Rising Cyrillic'; background-color: rgba(0,0,0,0); border: 2px solid #fff; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; cursor:pointer; text-decoration: none; text-transform: uppercase;">
-                           КЪМ ПРОЕКТА                        </a>
-                                    </li>
-                            <li data-index="rs-200" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="images/site/main-slider/dummy.png" alt="" data-lazyload="images/sliders/1920x898/1597683298_5f3ab66276bc56_46358089.jpg" data-bgposition="center center" data-kenburns="on" data-duration="4000" data-ease="Power3.easeInOut" data-scalestart="150" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption tp-shape tp-shapewrapper ov-tp " id="slide-100-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power4.easeIn&quot;}]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;font-family:Open Sans;"></div>
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption  " id="slide-100-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-80','-70','-70']" data-fontsize="['32','32','20','12']" data-lineheight="['45','40','35','30']" data-letterspacing="['0','0','0','0']" data-width="['1000','none','768','360']" data-height="none" data-whitespace="['normal','nowrap','normal','normal']" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]" data-textalign="['center','left','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 800px; max-width: 800px; font-weight: 700; white-space: normal; color: #ffffff; font-family: 'Venus Rising Cyrillic';">
-                        DC-01-CLINIC                    </div>
-                    <!-- LAYER NR. 3 -->
-                                        <!-- LAYER NR. 5 -->
-                                            <a class="tp-caption rev-btn tc-btnshadow" href="project/dentalna-klinika/index.html" target="_blank" id="slide-100-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['140','140','100','170']" data-lineheight="['60','60','50','50']" data-width="['280','280','280','180']" data-height="none" data-whitespace="nowrap" data-type="button" data-actions="" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;fbr:100;&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;o:1;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;opacity:0;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;frame&quot;:&quot;hover&quot;,&quot;speed&quot;:&quot;150&quot;,&quot;ease&quot;:&quot;Power1.easeInOut&quot;,&quot;to&quot;:&quot;o:1;rX:0;rY:0;rZ:0;z:0;fbr:90%;&quot;,&quot;style&quot;:&quot;c:rgba(255,255,255,0.8);&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[30,30,20,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[30,30,20,20]" style="z-index: 9; min-width: 280px; max-width: 280px; letter-spacing: 2px; white-space: nowrap; font-size: 11px; line-height: 20px; font-weight: 600; color: #fff; font-family: 'Venus Rising Cyrillic'; background-color: rgba(0,0,0,0); border: 2px solid #fff; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; cursor:pointer; text-decoration: none; text-transform: uppercase;">
-                           КЪМ ПРОЕКТА                        </a>
-                                    </li>
-                            <li data-index="rs-300" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="images/site/main-slider/dummy.png" alt="" data-lazyload="images/sliders/1920x898/1590947705_5ed3ef794173b1_25222854.jpg" data-bgposition="center center" data-kenburns="on" data-duration="4000" data-ease="Power3.easeInOut" data-scalestart="150" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption tp-shape tp-shapewrapper ov-tp " id="slide-100-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power4.easeIn&quot;}]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;font-family:Open Sans;"></div>
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption  " id="slide-100-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-80','-70','-70']" data-fontsize="['32','32','20','12']" data-lineheight="['45','40','35','30']" data-letterspacing="['0','0','0','0']" data-width="['1000','none','768','360']" data-height="none" data-whitespace="['normal','nowrap','normal','normal']" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]" data-textalign="['center','left','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 800px; max-width: 800px; font-weight: 700; white-space: normal; color: #ffffff; font-family: 'Venus Rising Cyrillic';">
-                        DC-01-MEDITERRANEAN                    </div>
-                    <!-- LAYER NR. 3 -->
-                                        <!-- LAYER NR. 5 -->
-                                            <a class="tp-caption rev-btn tc-btnshadow" href="project/Mediterranean/index.html" target="_blank" id="slide-100-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['140','140','100','170']" data-lineheight="['60','60','50','50']" data-width="['280','280','280','180']" data-height="none" data-whitespace="nowrap" data-type="button" data-actions="" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;fbr:100;&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;o:1;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;opacity:0;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;frame&quot;:&quot;hover&quot;,&quot;speed&quot;:&quot;150&quot;,&quot;ease&quot;:&quot;Power1.easeInOut&quot;,&quot;to&quot;:&quot;o:1;rX:0;rY:0;rZ:0;z:0;fbr:90%;&quot;,&quot;style&quot;:&quot;c:rgba(255,255,255,0.8);&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[30,30,20,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[30,30,20,20]" style="z-index: 9; min-width: 280px; max-width: 280px; letter-spacing: 2px; white-space: nowrap; font-size: 11px; line-height: 20px; font-weight: 600; color: #fff; font-family: 'Venus Rising Cyrillic'; background-color: rgba(0,0,0,0); border: 2px solid #fff; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; cursor:pointer; text-decoration: none; text-transform: uppercase;">
-                           КЪМ ПРОЕКТА                        </a>
-                                    </li>
-                            <li data-index="rs-400" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="images/site/main-slider/dummy.png" alt="" data-lazyload="images/sliders/1920x898/1590942198_5ed3d9f697a3e3_89209565.jpg" data-bgposition="center center" data-kenburns="on" data-duration="4000" data-ease="Power3.easeInOut" data-scalestart="150" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption tp-shape tp-shapewrapper ov-tp " id="slide-100-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power4.easeIn&quot;}]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;font-family:Open Sans;"></div>
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption  " id="slide-100-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-80','-70','-70']" data-fontsize="['32','32','20','12']" data-lineheight="['45','40','35','30']" data-letterspacing="['0','0','0','0']" data-width="['1000','none','768','360']" data-height="none" data-whitespace="['normal','nowrap','normal','normal']" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]" data-textalign="['center','left','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 800px; max-width: 800px; font-weight: 700; white-space: normal; color: #ffffff; font-family: 'Venus Rising Cyrillic';">
-                        DC-04-MODERN                    </div>
-                    <!-- LAYER NR. 3 -->
-                                        <!-- LAYER NR. 5 -->
-                                            <a class="tp-caption rev-btn tc-btnshadow" href="project/gold-fish/index.html" target="_blank" id="slide-100-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['140','140','100','170']" data-lineheight="['60','60','50','50']" data-width="['280','280','280','180']" data-height="none" data-whitespace="nowrap" data-type="button" data-actions="" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;fbr:100;&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;o:1;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;opacity:0;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;frame&quot;:&quot;hover&quot;,&quot;speed&quot;:&quot;150&quot;,&quot;ease&quot;:&quot;Power1.easeInOut&quot;,&quot;to&quot;:&quot;o:1;rX:0;rY:0;rZ:0;z:0;fbr:90%;&quot;,&quot;style&quot;:&quot;c:rgba(255,255,255,0.8);&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[30,30,20,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[30,30,20,20]" style="z-index: 9; min-width: 280px; max-width: 280px; letter-spacing: 2px; white-space: nowrap; font-size: 11px; line-height: 20px; font-weight: 600; color: #fff; font-family: 'Venus Rising Cyrillic'; background-color: rgba(0,0,0,0); border: 2px solid #fff; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; cursor:pointer; text-decoration: none; text-transform: uppercase;">
-                           КЪМ ПРОЕКТА                        </a>
-                                    </li>
-                            <li data-index="rs-500" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="images/site/main-slider/dummy.png" alt="" data-lazyload="images/sliders/1920x898/1590935301_5ed3bf05b48a97_48008585.jpg" data-bgposition="center center" data-kenburns="on" data-duration="4000" data-ease="Power3.easeInOut" data-scalestart="150" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption tp-shape tp-shapewrapper ov-tp " id="slide-100-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power4.easeIn&quot;}]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;font-family:Open Sans;"></div>
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption  " id="slide-100-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-80','-70','-70']" data-fontsize="['32','32','20','12']" data-lineheight="['45','40','35','30']" data-letterspacing="['0','0','0','0']" data-width="['1000','none','768','360']" data-height="none" data-whitespace="['normal','nowrap','normal','normal']" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]" data-textalign="['center','left','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 800px; max-width: 800px; font-weight: 700; white-space: normal; color: #ffffff; font-family: 'Venus Rising Cyrillic';">
-                        DC-03-MODERN                    </div>
-                    <!-- LAYER NR. 3 -->
-                                        <!-- LAYER NR. 5 -->
-                                            <a class="tp-caption rev-btn tc-btnshadow" href="project/moderen-stil-3/index.html" target="_blank" id="slide-100-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['140','140','100','170']" data-lineheight="['60','60','50','50']" data-width="['280','280','280','180']" data-height="none" data-whitespace="nowrap" data-type="button" data-actions="" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;fbr:100;&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;o:1;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;opacity:0;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;frame&quot;:&quot;hover&quot;,&quot;speed&quot;:&quot;150&quot;,&quot;ease&quot;:&quot;Power1.easeInOut&quot;,&quot;to&quot;:&quot;o:1;rX:0;rY:0;rZ:0;z:0;fbr:90%;&quot;,&quot;style&quot;:&quot;c:rgba(255,255,255,0.8);&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[30,30,20,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[30,30,20,20]" style="z-index: 9; min-width: 280px; max-width: 280px; letter-spacing: 2px; white-space: nowrap; font-size: 11px; line-height: 20px; font-weight: 600; color: #fff; font-family: 'Venus Rising Cyrillic'; background-color: rgba(0,0,0,0); border: 2px solid #fff; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; cursor:pointer; text-decoration: none; text-transform: uppercase;">
-                           КЪМ ПРОЕКТА                        </a>
-                                    </li>
-                            <li data-index="rs-600" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="images/site/main-slider/dummy.png" alt="" data-lazyload="images/sliders/1920x898/1590942792_5ed3dc48623b84_20894320.jpg" data-bgposition="center center" data-kenburns="on" data-duration="4000" data-ease="Power3.easeInOut" data-scalestart="150" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption tp-shape tp-shapewrapper ov-tp " id="slide-100-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power4.easeIn&quot;}]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;font-family:Open Sans;"></div>
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption  " id="slide-100-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-80','-70','-70']" data-fontsize="['32','32','20','12']" data-lineheight="['45','40','35','30']" data-letterspacing="['0','0','0','0']" data-width="['1000','none','768','360']" data-height="none" data-whitespace="['normal','nowrap','normal','normal']" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]" data-textalign="['center','left','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 800px; max-width: 800px; font-weight: 700; white-space: normal; color: #ffffff; font-family: 'Venus Rising Cyrillic';">
-                        DC-02-MODERN                    </div>
-                    <!-- LAYER NR. 3 -->
-                                        <!-- LAYER NR. 5 -->
-                                            <a class="tp-caption rev-btn tc-btnshadow" href="project/moderen-stil-2/index.html" target="_blank" id="slide-100-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['140','140','100','170']" data-lineheight="['60','60','50','50']" data-width="['280','280','280','180']" data-height="none" data-whitespace="nowrap" data-type="button" data-actions="" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;fbr:100;&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;o:1;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;opacity:0;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;frame&quot;:&quot;hover&quot;,&quot;speed&quot;:&quot;150&quot;,&quot;ease&quot;:&quot;Power1.easeInOut&quot;,&quot;to&quot;:&quot;o:1;rX:0;rY:0;rZ:0;z:0;fbr:90%;&quot;,&quot;style&quot;:&quot;c:rgba(255,255,255,0.8);&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[30,30,20,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[30,30,20,20]" style="z-index: 9; min-width: 280px; max-width: 280px; letter-spacing: 2px; white-space: nowrap; font-size: 11px; line-height: 20px; font-weight: 600; color: #fff; font-family: 'Venus Rising Cyrillic'; background-color: rgba(0,0,0,0); border: 2px solid #fff; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; cursor:pointer; text-decoration: none; text-transform: uppercase;">
-                           КЪМ ПРОЕКТА                        </a>
-                                    </li>
-                            <li data-index="rs-700" data-transition="fadethroughdark" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- MAIN IMAGE -->
-                    <img src="images/site/main-slider/dummy.png" alt="" data-lazyload="images/sliders/1920x898/1590934515_5ed3bbf3b58a46_12650413.jpg" data-bgposition="center center" data-kenburns="on" data-duration="4000" data-ease="Power3.easeInOut" data-scalestart="150" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption tp-shape tp-shapewrapper ov-tp " id="slide-100-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;Power4.easeIn&quot;}]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;font-family:Open Sans;"></div>
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption  " id="slide-100-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-80','-70','-70']" data-fontsize="['32','32','20','12']" data-lineheight="['45','40','35','30']" data-letterspacing="['0','0','0','0']" data-width="['1000','none','768','360']" data-height="none" data-whitespace="['normal','nowrap','normal','normal']" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;color&quot;:&quot;#000000&quot;,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]" data-textalign="['center','left','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 800px; max-width: 800px; font-weight: 700; white-space: normal; color: #ffffff; font-family: 'Venus Rising Cyrillic';">
-                        DC-01-MODERN                    </div>
-                    <!-- LAYER NR. 3 -->
-                                        <!-- LAYER NR. 5 -->
-                                            <a class="tp-caption rev-btn tc-btnshadow" href="project/whiteandgrey/index.html" target="_blank" id="slide-100-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['140','140','100','170']" data-lineheight="['60','60','50','50']" data-width="['280','280','280','180']" data-height="none" data-whitespace="nowrap" data-type="button" data-actions="" data-responsive_offset="off" data-responsive="off" data-frames="[{&quot;delay&quot;:900,&quot;speed&quot;:2000,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:50px;z:0;rX:0;rY:0;rZ:0;sX:1.1;sY:1.1;skX:0;skY:0;opacity:0;fbr:100;&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;o:1;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;bgcolor&quot;:&quot;#fff&quot;,&quot;to&quot;:&quot;opacity:0;fbr:100;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;frame&quot;:&quot;hover&quot;,&quot;speed&quot;:&quot;150&quot;,&quot;ease&quot;:&quot;Power1.easeInOut&quot;,&quot;to&quot;:&quot;o:1;rX:0;rY:0;rZ:0;z:0;fbr:90%;&quot;,&quot;style&quot;:&quot;c:rgba(255,255,255,0.8);&quot;}]" data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[30,30,20,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[30,30,20,20]" style="z-index: 9; min-width: 280px; max-width: 280px; letter-spacing: 2px; white-space: nowrap; font-size: 11px; line-height: 20px; font-weight: 600; color: #fff; font-family: 'Venus Rising Cyrillic'; background-color: rgba(0,0,0,0); border: 2px solid #fff; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; cursor:pointer; text-decoration: none; text-transform: uppercase;">
-                           КЪМ ПРОЕКТА                        </a>
-                                    </li>
-                    </ul>
-        <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
-</div><!-- END REVOLUTION SLIDER -->        </div>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <nav>
+            <a href="index.html">Начало</a>
+            <a href="projects/index.html">Проекти</a>
+            <a href="about-us/index.html">За нас</a>
+            <a href="contact-us/index.html">Контакти</a>
+        </nav>
     </div>
-</div>
-<!-- Slider END -->
-<div class="content-block">
-    <!-- About Us -->
-    <div class="section-full content-inner bg-gray">
+
+    <!-- Hero -->
+    <section class="luxury-hero">
+        <div class="luxury-hero-content fade-in-up">
+            <h1>Design-Code</h1>
+            <p>Създаваме изключителни интериорни пространства, където функционалността среща изкуството. Всяка детайл е обмислена, всяка линия е създадена с страст.</p>
+            <a href="projects/index.html" class="luxury-btn">
+                <span>Разгледай проектите</span>
+                <span>→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="luxury-section luxury-section-dark">
         <div class="container">
-            <div class="section-head text-center">
-                <h2 class="head-title">ИНТЕРИОРЕН ДИЗАЙН</h2>
-                <p>Проектиране, производство и изпълнение.</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 m-b30">
-                    <div class="icon-bx-wraper sr-iconbox bg-white p-a30 text-center">
-                        <div class="icon-lg m-b20">
-                            <a href="javascript:void(0)" class="icon-cell"><i class="flaticon-bed text-black-dark"></i></a>
-                        </div>
-                        <div class="icon-content">
-                            <h4 class="dlab-tilte">ПРОЕКТИРАНЕ</h4>
-                            <p>Проектиране, производство и изпълнение на обзавеждане спрямо вашите предпочитания и бюджет.</p>
-                        </div>
-                    </div>
+            <h2 class="luxury-section-title">Нашата философия</h2>
+            <div class="luxury-grid">
+                <div class="luxury-card">
+                    <h3>Внимание към детайла</h3>
+                    <p>Всеки проект започва с разбиране на вашата визия. Ние не просто проектираме пространства — създаваме преживявания, които отразяват вашата индивидуалност и стил.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 m-b30">
-                    <div class="icon-bx-wraper sr-iconbox bg-white p-a30 text-center">
-                        <div class="icon-lg m-b20">
-                            <a href="javascript:void(0)" class="icon-cell"><i class="flaticon-tools text-black-dark"></i></a>
-                        </div>
-                        <div class="icon-content">
-                            <h4 class="dlab-tilte">РЕМОНТ</h4>
-                            <p>Планиране, организиране и извършване на всички необходими дейности за изпълнението на нашите проекти.</p>
-                        </div>
-                    </div>
+                <div class="luxury-card">
+                    <h3>Иновация и традиция</h3>
+                    <p>Съчетаваме съвременни дизайнерски тенденции с класически принципи на хармония и баланс. Резултатът е вечна естетика, която не подлежи на времето.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 m-b30">
-                    <div class="icon-bx-wraper sr-iconbox bg-white p-a30 text-center">
-                        <div class="icon-lg m-b20">
-                            <a href="javascript:void(0)" class="icon-cell"><i class="flaticon-monitor text-black-dark"></i></a>
-                        </div>
-                        <div class="icon-content">
-                            <h4 class="dlab-tilte">МЕБЕЛИ И ОБЗАВЕЖДАНЕ</h4>
-                            <p>Изработване на функционални, комфортни и качествени мебели по проект на интериорния дизайн.</p>
-                        </div>
-                    </div>
+                <div class="luxury-card">
+                    <h3>Безкомпромисно качество</h3>
+                    <p>Използваме само най-висококачествени материали и работим с доказани майстори. Вашият дом заслужава нищо по-малко от перфекция.</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About Us End -->
+    </section>
 
-
-    <!-- Projects -->
-            <div class="section-full bg-white content-inner-1">
-            <div class="container">
-                <div class="section-head text-center">
-                    <h2 class="head-title">ПОРТФОЛИО</h2>
-                    <p>Разнообразието на Design-Code</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="site-filters filter-style1 clearfix m-b20">
-                            <ul class="filters" data-toggle="buttons">
-                                <li data-filter="" class="btn active"><input type="radio"><a href="#"><span>СТИЛОВЕ</span></a></li>
-                                                                    <li data-filter="cat3" class="btn">
-                                        <input type="radio"/>
-                                        <a href="#">
-                                            <span>Индустриален</span>
-                                        </a>
-                                    </li>
-                                                                    <li data-filter="cat6" class="btn">
-                                        <input type="radio"/>
-                                        <a href="#">
-                                            <span>Средиземноморски</span>
-                                        </a>
-                                    </li>
-                                                                    <li data-filter="cat7" class="btn">
-                                        <input type="radio"/>
-                                        <a href="#">
-                                            <span>Модерен</span>
-                                        </a>
-                                    </li>
-                                                                    <li data-filter="cat8" class="btn">
-                                        <input type="radio"/>
-                                        <a href="#">
-                                            <span>Класически</span>
-                                        </a>
-                                    </li>
-                                                                    <li data-filter="cat9" class="btn">
-                                        <input type="radio"/>
-                                        <a href="#">
-                                            <span>Неокласически</span>
-                                        </a>
-                                    </li>
-                                                                    <li data-filter="cat10" class="btn">
-                                        <input type="radio"/>
-                                        <a href="#">
-                                            <span>Минималистичен</span>
-                                        </a>
-                                    </li>
-                                                            </ul>
-                        </div>
-                    </div>
+    <!-- Portfolio Preview -->
+    <section class="luxury-section">
+        <div class="container">
+            <h2 class="luxury-section-title">Избрани проекти</h2>
+        </div>
+        <div class="luxury-portfolio">
+            <div class="luxury-portfolio-item">
+                <img src="images/projects/main/480x475/1590694827_5ed013ab2ace35_28495654.JPG" alt="Проект 1">
+                <div class="luxury-portfolio-info">
+                    <h3>Модерен минимализъм</h3>
+                    <p>Чисти линии и функционална елегантност</p>
                 </div>
             </div>
-            <div class="clearfix">
-                <ul id="masonry" class="dlab-gallery-listing gallery mfp-gallery text-center portfolio-bx p-l0">
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1675530256_63de90105e6770_11761180.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/diamond-2/index.html">Diamond 2</a></h3>
-                                        <a href="project/diamond-2/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1675528826_63de8a7a95e265_68584474.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/botevgrad/index.html">Botevgrad</a></h3>
-                                        <a href="project/botevgrad/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1675521809_63de6f113aba82_52881230.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/office-kitchen/index.html">Office kitchen</a></h3>
-                                        <a href="project/office-kitchen/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat3                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1673707270_63c2bf06540080_35950937.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Индустриален</span>
-                                        <h3 class="port-title"><a href="project/concrete/index.html">Concrete</a></h3>
-                                        <a href="project/concrete/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat8                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1669900415_6388a87ff0b282_19272781.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Класически</span>
-                                        <h3 class="port-title"><a href="project/classic-apart/index.html">Classic Apart</a></h3>
-                                        <a href="project/classic-apart/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1669899764_6388a5f4a720d4_49082976.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/Tropical-Paradise/index.html">Tropical Paradise</a></h3>
-                                        <a href="project/Tropical-Paradise/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat10                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1673707315_63c2bf340a0730_89643437.jpeg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Минималистичен</span>
-                                        <h3 class="port-title"><a href="project/in-line/index.html">IN LINE</a></h3>
-                                        <a href="project/in-line/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1626971862_60f99ed6314651_61011790.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/arizona-dream/index.html">Arizona Dream</a></h3>
-                                        <a href="project/arizona-dream/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1624445619_60d312b31ecc93_53540202.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/back-in-black/index.html">Back in Black</a></h3>
-                                        <a href="project/back-in-black/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat8                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1623093290_60be702a4901b4_76751475.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Класически</span>
-                                        <h3 class="port-title"><a href="project/white-and-oak/index.html">White and Oak</a></h3>
-                                        <a href="project/white-and-oak/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1623089560_60be6198e2bab7_82749771.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/black-wood-elegance/index.html">Black Wood Elegance</a></h3>
-                                        <a href="project/black-wood-elegance/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat9                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1622665614_60b7e98e96c425_38829553.JPG" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Неокласически</span>
-                                        <h3 class="port-title"><a href="project/venus/index.html">шкаф скулптура Венера</a></h3>
-                                        <a href="project/venus/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1622659525_60b7d1c51f6092_04651339.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/delta-hill/index.html">Delta Hill</a></h3>
-                                        <a href="project/delta-hill/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1593619212_5efcb30cec5a87_62918146.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/sofia-land-residence/index.html">Sofia Land Residence</a></h3>
-                                        <a href="project/sofia-land-residence/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590953218_5ed40502498ff7_66775302.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/tekushi-proekti/index.html">ТЕКУЩИ ПРОЕКТИ</a></h3>
-                                        <a href="project/tekushi-proekti/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590942950_5ed3dce67938f3_60537686.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/gold-fish/index.html">Gold Fish</a></h3>
-                                        <a href="project/gold-fish/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590937135_5ed3c62f5c0597_14910183.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/flora-garden/index.html">Flora Garden</a></h3>
-                                        <a href="project/flora-garden/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590943116_5ed3dd8cac64c9_05399336.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/surf-kitchen/index.html">Surf Kitchen</a></h3>
-                                        <a href="project/surf-kitchen/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat3                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590696194_5ed019022918a1_45182350.JPG" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Индустриален</span>
-                                        <h3 class="port-title"><a href="project/dentalna-klinika/index.html">Дентална клиника</a></h3>
-                                        <a href="project/dentalna-klinika/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat8                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590936412_5ed3c35c16a5c5_80581704.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Класически</span>
-                                        <h3 class="port-title"><a href="project/klasicheski-stil/index.html">Kласически стил</a></h3>
-                                        <a href="project/klasicheski-stil/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590936696_5ed3c4787fb980_86683890.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/beach-bungaloo/index.html">Beach bungaloo</a></h3>
-                                        <a href="project/beach-bungaloo/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat3                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590945047_5ed3e517e6be57_94115427.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Индустриален</span>
-                                        <h3 class="port-title"><a href="project/industrialna-kuhnya-2/index.html">Индустриална Кухня 2</a></h3>
-                                        <a href="project/industrialna-kuhnya-2/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat3                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590695434_5ed0160a9155b9_42808481.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Индустриален</span>
-                                        <h3 class="port-title"><a href="project/industrialna-kuhnya/index.html">Индустриална Кухня</a></h3>
-                                        <a href="project/industrialna-kuhnya/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat3                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590695290_5ed0157a8548e6_56890172.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Индустриален</span>
-                                        <h3 class="port-title"><a href="project/ofis/index.html">Офис</a></h3>
-                                        <a href="project/ofis/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat9                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590938713_5ed3cc59935fc3_16058053.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Неокласически</span>
-                                        <h3 class="port-title"><a href="project/neo-klasika/index.html">Нео Класика</a></h3>
-                                        <a href="project/neo-klasika/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat3                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590694827_5ed013ab2ace35_28495654.JPG" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Индустриален</span>
-                                        <h3 class="port-title"><a href="project/kuhnya-s-plot-decton-trillium/index.html">Кухня с плот decton trillium</a></h3>
-                                        <a href="project/kuhnya-s-plot-decton-trillium/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590946525_5ed3eadd500cd5_29429708.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/moderen-stil-3/index.html">Модерен стил 3</a></h3>
-                                        <a href="project/moderen-stil-3/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1591909062_5ee29ac68b8663_57588608.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/moderen-stil-2/index.html">Модерен стил 2</a></h3>
-                                        <a href="project/moderen-stil-2/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat7                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590948661_5ed3f33537a9a6_68983530.JPG" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Модерен</span>
-                                        <h3 class="port-title"><a href="project/whiteandgrey/index.html">White&Grey;</a></h3>
-                                        <a href="project/whiteandgrey/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                            <li class="card-container col-lg-3 col-md-4 col-sm-6 p-lr0 bordered-image
-                                                    cat6                                                 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                            <div class="dlab-media dlab-img-overlay1 dlab-img-effect portbox1">
-                                <img src="images/projects/main/480x475/1590946916_5ed3ec645e13b5_81784944.jpg" alt=""/>
-                                <div class="overlay-bx">
-                                    <div class="portinner">
-                                        <span>Средиземноморски</span>
-                                        <h3 class="port-title"><a href="project/Mediterranean/index.html">Средиземноморски</a></h3>
-                                        <a href="project/Mediterranean/index.html" class="btn outline white outline-2 radius-xl">Виж</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                                    </ul>
+            <div class="luxury-portfolio-item">
+                <img src="images/projects/main/480x475/1590695290_5ed0157a8548e6_56890172.jpg" alt="Проект 2">
+                <div class="luxury-portfolio-info">
+                    <h3>Индустриален шик</h3>
+                    <p>Градска естетика с характер</p>
+                </div>
+            </div>
+            <div class="luxury-portfolio-item">
+                <img src="images/projects/main/480x475/1590695434_5ed0160a9155b9_42808481.jpg" alt="Проект 3">
+                <div class="luxury-portfolio-info">
+                    <h3>Класическа елегантност</h3>
+                    <p>Вечна красота и изисканост</p>
+                </div>
+            </div>
+            <div class="luxury-portfolio-item">
+                <img src="images/projects/main/480x475/1590696194_5ed019022918a1_45182350.JPG" alt="Проект 4">
+                <div class="luxury-portfolio-info">
+                    <h3>Съвременен лукс</h3>
+                    <p>Премиум материали и дизайн</p>
+                </div>
             </div>
         </div>
-        <!-- Projects End -->
+    </section>
 
+    <!-- CTA Section -->
+    <section class="luxury-section luxury-section-dark" style="text-align: center;">
+        <div class="container">
+            <h2 class="luxury-section-title">Готови ли сте да започнем?</h2>
+            <p style="max-width: 600px; margin: 0 auto 40px; color: var(--text-muted); font-size: 1.1em;">
+                Нека създадем пространство, което ще ви вдъхновява всеки ден. Свържете се с нас за безплатна консултация.
+            </p>
+            <a href="contact-us/index.html" class="luxury-btn">
+                <span>Свържете се с нас</span>
+                <span>→</span>
+            </a>
+        </div>
+    </section>
 
-    <!-- Our Team -->
-            <div class="section-full bg-white overlay-black-dark bg-img-fix content-inner" style="background-image: url(images/dyn/background/1586642770_5e923f521cc428_85134779.jpg); background-size: cover; background-position: center;">
-            <div class="container">
-                <div class="section-head text-center text-white">
-                    <h2 class="head-title">НАШИЯ ЕКИП</h2>
-                    <p>Нашият екип е с дългогодишен опит и професионален усет за стил. <br/><br/><br/><br/>
-Ние сме фокусирани върху бутиковите обекти.<br/><br/><br/><br/>
-Проектираме и изпълняваме всякакви интериорни решения. <br/><br/><br/><br/>
-Държим на клиентите, които не правят компромис със себе си.</p>
-                </div>
-
-                    <div class="row justify-content-center">
-                                                    <div class="col-lg-4 col-md-6 col-sm-6 m-b30 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                                <div class="our-team">
-                                    <div class="dlab-media radius-sm">
-                                        <img src="images/team/441x441/1587155061_5e9a1075d297f4_38039017.jpg" alt="Гергана Тодорова">
-                                    </div>
-                                    <div class="team-title-bx text-center">
-                                        <h2 class="team-title">Гергана Тодорова</h2>
-                                        <span class="clearfix">Оснoвател</span>
-                                    </div>
-                                </div>
-                            </div>
-                                            </div>
+    <!-- Footer -->
+    <footer class="luxury-footer">
+        <div class="luxury-footer-content">
+            <div>
+                <img src="images/site/logo-white.png" alt="Design-Code" style="max-height: 40px; margin-bottom: 20px;">
+                <p>Създаваме изключителни интериорни пространства с внимание към детайла и страст към дизайна.</p>
+            </div>
+            <div>
+                <h4>Навигация</h4>
+                <p><a href="index.html">Начало</a></p>
+                <p><a href="projects/index.html">Проекти</a></p>
+                <p><a href="about-us/index.html">За нас</a></p>
+                <p><a href="contact-us/index.html">Контакти</a></p>
+            </div>
+            <div>
+                <h4>Контакти</h4>
+                <p>гр. София, България</p>
+                <p>info@design-code.bg</p>
+                <p>+359 888 123 456</p>
+            </div>
+            <div>
+                <h4>Социални мрежи</h4>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">LinkedIn</a></p>
             </div>
         </div>
-        <!-- Our Team END -->
-</div>            </div>
-            <!-- Content END-->
-            <!-- Footer -->
-            <footer class="site-footer">
-                <div class="footer-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="widget">
-                                    <div class="footer-logo">
-                                        <img src="images/site/logo-white.png" alt="">
-                                    </div>
-                                    <p>Интериорен дизайн, проектиране, ремонтно-строителни дейности, мебели и обзавеждане</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4">
-                                <div class="widget widget-info">
-                                    <h6 class="title text-white text-uppercase"><br></br>креативност и функционалност</h6>
-                                    <ul class="list-2 p-l0">
-    <li class="active">
-        <a href="index.html">НАЧАЛО</a>
-    </li>
-    <li>
-        <a href="projects/index.html">ПРОЕКТИ</a>
-    </li>
-    <li>
-        <a href="about-us/index.html">ЗА НАС</a>
-    </li>
-    <li>
-        <a href="questions-and-answers/index.html">ПРЕПОРЪКИ</a>
-    </li>
-    <li>
-        <a href="contact-us/index.html">КОНТАКТИ</a>
-    </li>
-</ul>                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <p>Copyright © 2020 Design Code. Всички права запазени.</p>
-                            </div>
-                            <div class="col-lg-2 align-self-center">
-                                <ul class="list-inline">
-                                                                            <li><a href="https://web.archive.org/web/20240515143605/http://www.facebook.com/" target="_blank" class="btn-link gray"><i class="fa fa-facebook"></i></a></li>
-                                                                                                                <li><a href="https://web.archive.org/web/20240515143605/http://instagram.com/" target="_blank" class="btn-link gray"><i class="fa fa-instagram"></i></a></li>
-                                                                                                                <li><a href="https://web.archive.org/web/20240515143605/http://twitter.com/" target="_blank" class="btn-link gray"><i class="fa fa-twitter"></i></a></li>
-                                                                    </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- Footer END -->
-            <button class="scroltop fa fa-chevron-up"></button>
+        <div class="luxury-footer-bottom">
+            <p>&copy; 2024 Design-Code. Всички права запазени.</p>
         </div>
-        <script type="text/javascript" src="js/site/jquery.min.js"></script>
-<script type="text/javascript" src="plugins/wow/wow.js"></script>
-<script type="text/javascript" src="plugins/bootstrap/js/popper.min.js"></script>
-<script type="text/javascript" src="plugins/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
-<script type="text/javascript" src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
-<script type="text/javascript" src="plugins/magnific-popup/magnific-popup.js"></script>
-<script type="text/javascript" src="plugins/counter/waypoints-min.js"></script>
-<script type="text/javascript" src="plugins/counter/counterup.min.js"></script>
-<script type="text/javascript" src="plugins/imagesloaded/imagesloaded.js"></script>
-<script type="text/javascript" src="plugins/masonry/masonry-3.1.4.js"></script>
-<script type="text/javascript" src="plugins/masonry/masonry.filter.js"></script>
-<script type="text/javascript" src="plugins/owl-carousel/owl.carousel.js"></script>
-<script type="text/javascript" src="plugins/scroll/scrollbar.min.js"></script>
-<script type="text/javascript" src="js/site/custom.js"></script>
-<script type="text/javascript" src="js/site/dz.carousel.js"></script>
-<script type="text/javascript" src="js/site/dz.ajax.js"></script>
-<script type="text/javascript" src="js/site/hammer.min.js"></script>
-<script type="text/javascript" src="js/site/jquery.images-compare.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script type="text/javascript" src="plugins/revolution/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<script type="text/javascript" src="js/site/rev.slider.js"></script>
-        <script>
-            jQuery(document).ready(function() {
-                'use strict';
-                dz_rev_slider_1();
-            });	/*ready*/
-        </script>
+    </footer>
 
-    </body>
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
 </html>
-<!--
-     FILE ARCHIVED ON 14:36:05 May 15, 2024 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 17:23:30 Aug 06, 2026.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
--->
-<!--
-playback timings (ms):
-  captures_list: 0.34
-  exclusion.robots: 0.027
-  exclusion.robots.policy: 0.018
-  esindex: 0.006
-  cdx.remote: 7.149
-  LoadShardBlock: 156.211 (3)
-  PetaboxLoader3.datanode: 56.235 (4)
-  PetaboxLoader3.resolve: 101.726 (3)
-  load_resource: 57.591
--->

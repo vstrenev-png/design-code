@@ -2,8 +2,8 @@
 <html lang="bg">
 <head>
     <meta charset="utf-8">
-    <title>За нас — Design-Code</title>
-    <meta name="description" content="Научете повече за нашата философия и подход към интериорния дизайн.">
+    <title>Проекти — Design-Code</title>
+    <meta name="description" content="Разгледайте нашите избрани интериорни проекти.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link href="css/luxury.css" rel="stylesheet" type="text/css">
@@ -91,19 +91,62 @@
         .mobile-menu-overlay nav a:hover {
             color: #8dc63f;
         }
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.9;
-            font-size: 1.1em;
-            color: var(--text-muted);
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2px;
+            margin-top: 40px;
         }
-        .about-content h3 {
-            color: var(--primary-green);
+        .project-card {
+            position: relative;
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .project-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,10,10,0.9), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+        .project-card:hover::before {
+            opacity: 1;
+        }
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+        .project-card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            z-index: 2;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+        .project-card:hover .project-card-info {
+            transform: translateY(0);
+        }
+        .project-card-info h3 {
+            font-size: 1.3em;
             font-weight: 300;
             letter-spacing: 2px;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            color: #f5f5f5;
+        }
+        .project-card-info p {
+            color: #a0a0a0;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -111,7 +154,7 @@
 
     <!-- Header Bar -->
     <header class="luxury-header-bar">
-        <a href="index.html">
+        <a href="luxury-index.html">
             <img src="images/site/logo-white.png" alt="Design-Code" class="logo">
         </a>
         <button class="menu-btn" aria-label="Menu" id="menuBtn">
@@ -124,28 +167,63 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenu">
         <nav>
-            <a href="index.html">Начало</a>
-            <a href="projects/index.html">Проекти</a>
-            <a href="about-us/index.html">За нас</a>
-            <a href="contact-us/index.html">Контакти</a>
+            <a href="luxury-index.html">Начало</a>
+            <a href="luxury-projects.html">Проекти</a>
+            <a href="luxury-about.html">За нас</a>
+            <a href="luxury-contact.html">Контакти</a>
         </nav>
     </div>
 
-    <!-- About Section -->
+    <!-- Projects Section -->
     <section class="luxury-section">
         <div class="container">
-            <h2 class="luxury-section-title">За нас</h2>
-            <div class="about-content">
-                <p>Design-Code е студио за интериорен дизайн, създадено с една мисия — да превръщаме пространствата в преживявания. Вярваме, че добрият дизайн не е просто красота, а съчетание от функционалност, естетика и внимание към детайла.</p>
-
-                <h3>Нашата история</h3>
-                <p>Започнахме през 2010 година с малък екип от ентусиасти, обединени от страстта към красивите интериори. През годините израснахме в екип от професионалисти, които работят по проекти от всякакъв мащаб — от малки апартаменти до големи жилищни и търговски пространства.</p>
-
-                <h3>Нашият подход</h3>
-                <p>Всеки проект започва с разговор. Искаме да разберем вашите нужди, мечти и начин на живот. След това създаваме концепция, която отразява вашата индивидуалност. Работим в тясно сътрудничество с вас през целия процес — от първата скица до последния детайл.</p>
-
-                <h3>Нашият екип</h3>
-                <p>Екипът ни се състои от архитекти, дизайнери и майстори, които споделят една обща цел — създаване на пространства, които вдъхновяват. Непрекъснато следим за нови тенденции и технологии в дизайна, за да предлагаме най-доброто на нашите клиенти.</p>
+            <h2 class="luxury-section-title">Нашите проекти</h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                Разгледайте нашите избрани интериорни проекти. Всеки проект е уникално съчетание от функционалност и естетика.
+            </p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="images/projects/main/480x475/1590694827_5ed013ab2ace35_28495654.JPG" alt="Проект 1">
+                <div class="project-card-info">
+                    <h3>Модерен минимализъм</h3>
+                    <p>Чисти линии и функционална елегантност</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/projects/main/480x475/1590695290_5ed0157a8548e6_56890172.jpg" alt="Проект 2">
+                <div class="project-card-info">
+                    <h3>Индустриален шик</h3>
+                    <p>Градска естетика с характер</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/projects/main/480x475/1590695434_5ed0160a9155b9_42808481.jpg" alt="Проект 3">
+                <div class="project-card-info">
+                    <h3>Класическа елегантност</h3>
+                    <p>Вечна красота и изисканост</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/projects/main/480x475/1590696194_5ed019022918a1_45182350.JPG" alt="Проект 4">
+                <div class="project-card-info">
+                    <h3>Съвременен лукс</h3>
+                    <p>Премиум материали и дизайн</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/projects/main/480x475/1590936412_5ed3c35c16a5c5_80581704.jpg" alt="Проект 5">
+                <div class="project-card-info">
+                    <h3>Скандинавски стил</h3>
+                    <p>Светлина и простота</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/projects/main/480x475/1590936696_5ed3c4787fb980_86683890.jpg" alt="Проект 6">
+                <div class="project-card-info">
+                    <h3>Градски апартамент</h3>
+                    <p>Модерен живот в града</p>
+                </div>
             </div>
         </div>
     </section>
@@ -159,10 +237,10 @@
             </div>
             <div>
                 <h4>Навигация</h4>
-                <p><a href="index.html">Начало</a></p>
-                <p><a href="projects/index.html">Проекти</a></p>
-                <p><a href="about-us/index.html">За нас</a></p>
-                <p><a href="contact-us/index.html">Контакти</a></p>
+                <p><a href="luxury-index.html">Начало</a></p>
+                <p><a href="luxury-projects.html">Проекти</a></p>
+                <p><a href="luxury-about.html">За нас</a></p>
+                <p><a href="luxury-contact.html">Контакти</a></p>
             </div>
             <div>
                 <h4>Контакти</h4>
