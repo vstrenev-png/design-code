@@ -8,6 +8,8 @@
     margin-bottom: 40px;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
+    left: 0;
+    right: 0;
 }
 
 .project-slider .slide {
@@ -195,4 +197,21 @@
     .project-gallery {
         grid-template-columns: 1fr;
     }
+}
+
+/* Full width overrides */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.page-wraper,
+.page-content {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
