@@ -1,4 +1,4 @@
-/* Project slider - elegant design inspired by original site */
+/* Project slider - simple and reliable */
 .project-slider {
     position: relative;
     width: 100%;
@@ -6,10 +6,6 @@
     min-height: 500px;
     overflow: hidden;
     margin-bottom: 40px;
-    margin-left: 0;
-    margin-right: 0;
-    left: 0;
-    right: 0;
 }
 
 .project-slider .slide {
@@ -20,6 +16,9 @@
     height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-slider .slide.active {
@@ -203,15 +202,6 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
-}
-body {
     margin: 0;
     padding: 0;
-}
-.page-wraper,
-.page-content {
-    max-width: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
 }
