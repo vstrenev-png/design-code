@@ -246,10 +246,10 @@ img{display:block;max-width:100%}
   background:linear-gradient(180deg,rgba(10,10,10,.55) 0%,rgba(10,10,10,.15) 45%,rgba(10,10,10,.88) 100%);
 }
 .hero__inner{position:relative;z-index:1}
-.hero__line{overflow:hidden}
+.hero__line{overflow:hidden;padding:.18em 0}
 .hero__line span{
   display:block;font-family:var(--serif);font-weight:300;
-  font-size:clamp(3.4rem,14.5vw,15rem);line-height:1.05;letter-spacing:-.015em;
+  font-size:clamp(3.4rem,14.5vw,15rem);line-height:1.15;letter-spacing:0;
   transform:translate3d(0,115%,0);
 }
 .hero__line--two{text-align:right}
