@@ -119,9 +119,38 @@ img{display:block;max-width:100%}
 .reveal.inview{opacity:1;transform:none}
 .reveal[data-d="1"]{transition-delay:.14s}
 
+/* project cards — shared between index and projects listing */
+.projects{display:grid;grid-template-columns:repeat(12,1fr);gap:0 3vw}
+.project{position:relative;display:block;margin-bottom:14vh}
+.project:nth-child(odd){grid-column:1/8}
+.project:nth-child(even){grid-column:9/13;padding-top:22vh;margin-bottom:0}
+.project:nth-child(odd) .project__frame{aspect-ratio:16/10}
+.project:nth-child(even) .project__frame{aspect-ratio:3/4}
+.project__frame{overflow:hidden;position:relative}
+.project__frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.4s var(--ease),filter 1.4s var(--ease);filter:brightness(.82);will-change:transform}
+.project:hover .project__frame img{transform:scale(1.02);filter:brightness(1)}
+.project__frame::after{
+  content:"Виж проекта";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:.66rem;letter-spacing:.4em;text-transform:uppercase;color:var(--text);background:rgba(10,10,10,.45);
+  opacity:0;transition:opacity .5s;
+}
+.project:hover .project__frame::after{opacity:1}
+.project__info{display:flex;justify-content:space-between;align-items:baseline;gap:2rem;margin-top:1.6rem}
+.project__name{font-family:var(--serif);font-size:1.6rem;font-weight:400;line-height:1.2}
+.project__num{font-size:.68rem;letter-spacing:.3em;color:var(--accent);flex-shrink:0}
+.project__meta{
+  display:flex;gap:2.4rem;margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--line);
+}
+.project__meta div{display:flex;flex-direction:column;gap:.55rem}
+.project__meta dt{font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);line-height:1.5}
+.project__meta dd{font-size:.72rem;letter-spacing:.14em;color:var(--text);line-height:1.5}
+
 @media(max-width:960px){
   .p-overview{grid-template-columns:1fr;gap:5vh}
   .p-gallery figure.full{height:64vh}
   .p-gallery figure.split{grid-template-columns:1fr;gap:4vh}
   .p-gallery figure.split .half{height:52vh}
+  .projects .project{grid-column:1/13!important;padding-top:0!important;margin-bottom:10vh!important}
+  .projects .project__frame{aspect-ratio:16/10!important}
+  .project__meta{flex-wrap:wrap;gap:1.2rem 2.4rem}
 }

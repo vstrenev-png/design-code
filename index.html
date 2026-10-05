@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="project.css">
 <style>
 :root{
   --bg:#0a0a0a; --panel:#141414; --line:#242424;
@@ -203,31 +204,6 @@ img{display:block;max-width:100%}
 .space-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}
 .space-preview img.active{opacity:1}
 
-.projects{display:grid;grid-template-columns:repeat(12,1fr);gap:0 3vw}
-.project{position:relative;display:block;margin-bottom:14vh}
-.project:nth-child(odd){grid-column:1/8}
-.project:nth-child(even){grid-column:9/13;padding-top:22vh;margin-bottom:0}
-.project:nth-child(odd) .project__frame{aspect-ratio:16/10}
-.project:nth-child(even) .project__frame{aspect-ratio:3/4}
-.project__frame{overflow:hidden;position:relative}
-.project__frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.4s var(--ease),filter 1.4s var(--ease);filter:brightness(.82);will-change:transform}
-.project:hover .project__frame img{transform:scale(1.02);filter:brightness(1)}
-.project__frame::after{
-  content:"Виж проекта";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  font-size:.66rem;letter-spacing:.4em;text-transform:uppercase;color:var(--text);background:rgba(10,10,10,.45);
-  opacity:0;transition:opacity .5s;
-}
-.project:hover .project__frame::after{opacity:1}
-.project__info{display:flex;justify-content:space-between;align-items:baseline;gap:2rem;margin-top:1.6rem}
-.project__name{font-family:var(--serif);font-size:1.6rem;font-weight:400}
-.project__num{font-size:.68rem;letter-spacing:.3em;color:var(--accent);flex-shrink:0}
-.project__meta{
-  display:flex;gap:2.4rem;margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--line);
-}
-.project__meta div{display:flex;flex-direction:column;gap:.3rem}
-.project__meta dt{font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
-.project__meta dd{font-size:.72rem;letter-spacing:.14em;color:var(--text)}
-
 .showreel{padding:0 0 16vh}
 .showreel__head{padding:0 4vw;margin-bottom:6vh;display:flex;justify-content:space-between;align-items:baseline}
 .showreel__label{font-size:.7rem;letter-spacing:.3em;color:var(--accent);text-transform:uppercase}
@@ -329,8 +305,6 @@ img{display:block;max-width:100%}
 @media(max-width:960px){
   .nav__links{display:none}
   .burger{display:flex}
-  .projects .project{grid-column:1/13!important;padding-top:0!important;margin-bottom:10vh!important}
-  .projects .project__frame{aspect-ratio:16/10!important}
   .space{grid-template-columns:3.4rem 1fr 2rem}
   .space__desc{display:none}
   .space-preview{display:none}
