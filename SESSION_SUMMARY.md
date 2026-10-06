@@ -1,87 +1,185 @@
 # Design-Code Website — Session Summary
 
-## What was done
+## Live test link
+https://vstrenev-png.github.io/design-code-website/
 
-All old projects were **completely replaced** with the new assets from the Google Drive folder `Design Code - g.designcode`. The site was regenerated and redeployed to the test GitHub Pages domain.
+## Working directory
+`/Users/admin/Kimi Workplace/design-code-website/`
 
-**Live link:** https://vstrenev-png.github.io/design-code-website/
+## What has been done
 
-## Current project state
+### 1. Project replacement and cleanup
+- All old projects were replaced with the new assets from the Google Drive folder `Design Code - g.designcode` (downloaded to `Downloads/Kimi_Agent_Design-Code сайт без кариери (1)`).
+- Duplicate images were removed by content hash.
+- `office-3d` and `office-kazbek` were merged into a single project (`office-kazbek`).
+- Final project count: **34 projects**.
 
-- **Total projects:** 35
-- **Featured on home page:** 6 (selected automatically by largest image count)
-  - In Line (43 images)
-  - Green Cottage (32 images)
-  - Ivan Vazov Apartment (160 images)
-  - John Galliano Office Sofia (29 images)
-  - White Apartment Modern (68 images)
-  - House Dragalevtsi (26 images)
+### 2. Metadata updated per user list
+The following renames and metadata corrections were applied in `projects.json`:
 
-## New/relevant files
+| Old slug/name | New name | Type | Location | Year |
+|---|---|---|---|---|
+| simeon | къща Иваняне / House Ivanyane | Жилище / Residential | Иваняне / Ivanyane | 2022 |
+| adriana-turkmen-ap | Modern Kitchen | Жилище / Residential | София / Sofia | 2016 |
+| roberto-first-ap | House Sandanski | Жилище / Residential | Сандански / Sandanski | 2014 |
+| rosana | Smolqn Apartment | Жилище / Residential | Смолян / Smolyan | 2015 |
+| valyo-denchev-ap | Мансарда под небето / Attic under the sky | Жилище / Residential | София / Sofia | 2016 |
+| vasil-iliev-mezonet | Мезонет / Maisonette | Жилище / Residential | София / Sofia | 2017 |
+| mara-realized-3d | Neoclassical Apartment | Жилище / Residential | София / Sofia | 2020 |
+| old mezonet | Мезонет 2018 / Maisonette 2018 | Жилище / Residential | София / Sofia | 2018 |
 
-| File | Description |
-|------|-------------|
-| `projects.json` | Central data source with all 35 projects |
-| `build.js` | Generates `index.html`, `projects.html`, and all `project-*.html` |
-| `replace-projects.js` | Replaces all projects from a Google Drive download folder |
-| `assets/projects/<slug>/` | Project images (sanitized lowercase filenames) |
-| `drive-mapping-proposal.json` | Old mapping proposal (no longer needed for full replacement) |
+Other year/type/location corrections applied:
+- In Line → 2022
+- Dental Clinic Green Apple → 2019
+- Green Cottage → Св. Константин и Елена / St. Constantine and Helena, 2024
+- Arizona Dream → Bungalow, Arizona, 2020
+- Tropical Clinic → Public Space, 2022
+- John Galliano Office Sofia → Office, 2016
+- Natalie → 2022
+- Office 2 → 2021
+- Parsa Sohi → 2021
+- Pernik Apartment → 2016
+- Antre Botevgrad → 2015
+- Apartment Sofia → 2017
+- Beach Bungaloo → Sea, 2016
+- Black Wood Elegance → 2020
+- Delta Hill House → с. Кладница / Kladnitsa village, 2014
+- Diamant 2 → 2022
+- Grey & White → 2020
+- Industrial Kitchen → 2019
+- Mediterranean → 2020
+- White Apartment Modern → 2015
+- House Dragalevtsi → 2018
+- Cannes → Cannes, 2024
+- Ivan Vazov Apartment → 2017
 
-## Project slugs created
+### 3. Home page redesign
+- The home hero now matches the old site: large green `DESIGN—CODE` title, tagline, and CTA button.
+- Hero text overlap issues (CTA button vs. scroll indicator) were fixed.
 
-```
-adriana-turkmen-ap, antre-botevgrad, ap-sofia, arizona-dream,
-beach-bungaloo, black-wood-elegance, botevgrad-ap-3d, cannes,
-delta-hill-house, dental-clinic-green-apple, dental-clinic-tropical-paradise,
-diamant-2, green-cottage, grey-white, industrial-kitchen, in-line,
-ivan-vazov-ap, john-galliano-office-sofia, kasa-dragalevtsi, mara-realized-3d,
-mediteranean, mezonet, nashiya-ofis, natalie, office-2, office-3d,
-office-kazbek, parsa-sohi, pernik-ap, roberto-first-ap, rosana, simeon,
-valyo-denchev-ap, vasil-iliev-mezonet, white-ap-modern
-```
+### 4. EN/BG language switcher (completed)
+- Added **BG / EN** toggle in the top navigation on every generated page.
+- Selected language is persisted in `localStorage` (`dc-lang`).
+- All static UI text and project metadata switch instantly without reload.
+- New files:
+  - `i18n.js` — runtime language switcher and translation dictionary
+  - Updated `build.js`, `projects.json`, `project.css`, `index.html`, `projects.html`, all `project-*.html`
 
-## How to edit projects
+## How to continue editing
 
-1. Open `/Users/admin/Kimi Workplace/design-code-website/`.
-2. Edit `projects.json` — update `title`, `type`, `location`, `year`, `area`, `lead`, `description`, `featured`.
-3. Add/remove images in `assets/projects/<slug>/`.
-4. Regenerate pages:
+1. Open the working directory:
+   ```bash
+   cd "/Users/admin/Kimi Workplace/design-code-website"
+   git pull origin main
+   ```
+
+2. Edit project data in `projects.json`:
+   - `title`, `title_en`
+   - `type`, `type_en`
+   - `location`, `location_en`
+   - `year`
+   - `lead`, `lead_en`
+   - `description`, `description_en`
+   - `hero` — main image for the project page
+   - `gallery` — list of project images
+   - `featured: true/false` — controls which projects appear on the home page
+
+3. Add/remove project images in `assets/projects/<slug>/`.
+
+4. Regenerate the site:
    ```bash
    node build.js
    ```
+
 5. Preview locally:
    ```bash
    node server.js
    # open http://localhost:8765
    ```
+
 6. Deploy:
    ```bash
    git add -A && git commit -m "..." && git push origin main
    ```
 
-## How to replace projects again from Google Drive
+## Remaining tasks (from user list)
 
-If you download an updated `Design Code - g.designcode` folder to `Downloads`, run:
+1. **3D ↔ realization comparison slider**
+   - Add a `comparisons` array to projects in `projects.json`:
+     ```json
+     "comparisons": [
+       { "render": "path/to/3d.jpg", "photo": "path/to/photo.jpg", "label": "Living room" }
+     ]
+     ```
+   - Update `build.js` to generate a before/after slider for each pair.
+
+2. **Individual project descriptions (iqosa style)**
+   - Replace the generic `description`/`lead` texts in `projects.json` with unique style/concept notes for each project.
+
+3. **Hero image selection and image cleanup**
+   - Choose the best photo as `hero` for each project.
+   - Remove specific images (e.g. the black glossy kitchen from Ivan Vazov).
+   - Remove any remaining duplicate or low-quality images.
+   - This requires user input/screenshots because the agent cannot visually identify which image is which.
+
+4. **Missing project**
+   - User mentioned a missing project **Golden Fish** (ап. on Blvd. Bulgaria with a golden curved wall). It is not in the current Drive folder; add it if assets are provided.
+
+5. **Non-generated pages**
+   - `contact.html` and `questions-and-answers.html` still use the old nav without the language switcher. They are not generated by `build.js`, so they need manual updates or inclusion in the generator if they should also be bilingual.
+
+## Project slugs (current)
+
+```
+in-line
+dental-clinic-green-apple
+green-cottage
+arizona-dream
+botevgrad-ap-3d
+cannes
+ivan-vazov-ap
+john-galliano-office-sofia
+natalie
+office-2
+parsa-sohi
+pernik-ap
+antre-botevgrad
+ap-sofia
+beach-bungaloo
+black-wood-elegance
+delta-hill-house
+diamant-2
+grey-white
+industrial-kitchen
+mediteranean
+office-kazbek
+white-ap-modern
+kasa-dragalevtsi
+nashiya-ofis
+mezonet-2018
+kasa-ivanyane
+tropical-clinic
+modern-kitchen
+house-sandanski
+smolqn-ap
+mansarda-pod-nebeto
+neoclassical-ap
+mezonet
+```
+
+## Key commands
 
 ```bash
-cd "/Users/admin/Kimi Workplace/design-code-website"
+# Regenerate all pages
+node build.js
+
+# Replace projects from a fresh Drive download
 node replace-projects.js
 node build.js
+
+# Local preview
+node server.js
+
+# Deploy
+git add -A && git commit -m "..." && git push origin main
 ```
-
-This will delete all current project images and pages and recreate them from the Drive folder. Edit `replace-projects.js` if you want to change merge groups or project titles.
-
-## Remaining work
-
-- **Project texts:** all `title`, `type`, `location`, `year`, `area`, `lead`, and `description` fields are placeholders or auto-generated from folder names. Edit them in `projects.json`.
-- **Featured projects:** currently selected by image count. Change `featured: true/false` in `projects.json` to control the home page.
-- **Contact form:** `STRIPE_PAYMENT_LINK` and `FORM_ENDPOINT` in `contact.html` are still empty.
-
-## How to continue in a new session
-
-```bash
-cd "/Users/admin/Kimi Workplace/design-code-website"
-git pull origin main
-```
-
-Then edit `projects.json` and run `node build.js`.
