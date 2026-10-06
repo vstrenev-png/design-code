@@ -22,38 +22,43 @@ const nav = () => `
     <span class="nav__name">Design<em>—</em>Code</span>
   </a>
   <nav class="nav__links">
-    <div class="nav__item"><a href="projects.html" data-hover>Проекти</a></div>
+    <div class="nav__item"><a href="projects.html" data-hover data-i18n="nav_projects">Проекти</a></div>
     <div class="nav__item" id="svcDrop">
-      <button class="nav__drop-btn" data-hover>Услуги<span class="plus">+</span></button>
+      <button class="nav__drop-btn" data-hover><span data-i18n="nav_services">Услуги</span><span class="plus">+</span></button>
       <div class="dropdown">
-        <a href="index.html#spaces" data-hover><i>01</i>Жилищни</a>
-        <a href="index.html#spaces" data-hover><i>02</i>Хотелиерство</a>
-        <a href="index.html#spaces" data-hover><i>03</i>Търговски</a>
-        <a href="index.html#spaces" data-hover><i>04</i>Спа &amp; Уелнес</a>
+        <a href="index.html#spaces" data-hover><i>01</i><span data-i18n="nav_residential">Жилищни</span></a>
+        <a href="index.html#spaces" data-hover><i>02</i><span data-i18n="nav_hospitality">Хотелиерство</span></a>
+        <a href="index.html#spaces" data-hover><i>03</i><span data-i18n="nav_commercial">Търговски</span></a>
+        <a href="index.html#spaces" data-hover><i>04</i><span data-i18n="nav_spa_wellness">Спа &amp; Уелнес</span></a>
       </div>
     </div>
-    <div class="nav__item"><a href="index.html#about" data-hover>За нас</a></div>
-    <div class="nav__item"><a href="contact.html" data-hover>Контакти</a></div>
-    <div class="nav__item"><a href="questions-and-answers.html" data-hover>Препоръки</a></div>
+    <div class="nav__item"><a href="index.html#about" data-hover data-i18n="nav_about">За нас</a></div>
+    <div class="nav__item"><a href="contact.html" data-hover data-i18n="nav_contacts">Контакти</a></div>
+    <div class="nav__item"><a href="questions-and-answers.html" data-hover data-i18n="nav_recommendations">Препоръки</a></div>
   </nav>
+  <div class="lang-switch">
+    <button class="lang-btn active" data-lang="bg" aria-label="Български">BG</button>
+    <span>/</span>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+  </div>
   <button class="burger" id="burger" aria-label="Меню" data-hover><span></span><span></span></button>
 </header>
 
 <div class="menu-overlay" id="menu">
-  <a href="projects.html" data-hover>Проекти</a>
-  <a href="index.html#spaces" data-hover>Услуги</a>
-  <a href="index.html#about" data-hover>За нас</a>
-  <a href="contact.html" data-hover>Контакти</a>
-  <a href="questions-and-answers.html" data-hover>Препоръки</a>
+  <a href="projects.html" data-hover data-i18n="nav_projects">Проекти</a>
+  <a href="index.html#spaces" data-hover data-i18n="nav_services">Услуги</a>
+  <a href="index.html#about" data-hover data-i18n="nav_about">За нас</a>
+  <a href="contact.html" data-hover data-i18n="nav_contacts">Контакти</a>
+  <a href="questions-and-answers.html" data-hover data-i18n="nav_recommendations">Препоръки</a>
 </div>
 `;
 
 const mainFooter = () => `
 <footer class="footer">
   <div class="footer__emails">
-    <div class="footer__email"><span>Запитване</span><a href="mailto:info@design-code.bg" data-hover>info@design-code.bg</a></div>
-    <div class="footer__email"><span>Нови проекти</span><a href="mailto:projects@design-code.bg" data-hover>projects@design-code.bg</a></div>
-    <div class="footer__email"><span>Доставчици</span><a href="mailto:supply@design-code.bg" data-hover>supply@design-code.bg</a></div>
+    <div class="footer__email"><span data-i18n="footer_inquiry">Запитване</span><a href="mailto:info@design-code.bg" data-hover>info@design-code.bg</a></div>
+    <div class="footer__email"><span data-i18n="footer_new_projects">Нови проекти</span><a href="mailto:projects@design-code.bg" data-hover>projects@design-code.bg</a></div>
+    <div class="footer__email"><span data-i18n="footer_suppliers">Доставчици</span><a href="mailto:supply@design-code.bg" data-hover>supply@design-code.bg</a></div>
   </div>
   <div class="footer__mark">
     <img src="assets/logo.png" alt="Design-Code лого">
@@ -61,27 +66,27 @@ const mainFooter = () => `
   </div>
   <div class="footer__cols">
     <div class="footer__col">
-      <h4>Основно</h4>
-      <a href="projects.html" data-hover>Проекти</a>
-      <a href="index.html#about" data-hover>За нас</a>
-      <a href="contact.html" data-hover>Контакти</a>
-      <a href="questions-and-answers.html" data-hover>Препоръки</a>
+      <h4 data-i18n="footer_main">Основно</h4>
+      <a href="projects.html" data-hover data-i18n="nav_projects">Проекти</a>
+      <a href="index.html#about" data-hover data-i18n="nav_about">За нас</a>
+      <a href="contact.html" data-hover data-i18n="nav_contacts">Контакти</a>
+      <a href="questions-and-answers.html" data-hover data-i18n="nav_recommendations">Препоръки</a>
     </div>
     <div class="footer__col">
-      <h4>Услуги</h4>
-      <a href="index.html#spaces" data-hover>Жилищни</a>
-      <a href="index.html#spaces" data-hover>Хотелиерство</a>
-      <a href="index.html#spaces" data-hover>Търговски</a>
-      <a href="index.html#spaces" data-hover>Спа &amp; Уелнес</a>
+      <h4 data-i18n="footer_services">Услуги</h4>
+      <a href="index.html#spaces" data-hover data-i18n="nav_residential">Жилищни</a>
+      <a href="index.html#spaces" data-hover data-i18n="nav_hospitality">Хотелиерство</a>
+      <a href="index.html#spaces" data-hover data-i18n="nav_commercial">Търговски</a>
+      <a href="index.html#spaces" data-hover data-i18n="nav_spa_wellness">Спа &amp; Уелнес</a>
     </div>
     <div class="footer__col">
-      <h4>Офис</h4>
-      <p>София, България</p>
+      <h4 data-i18n="footer_office">Офис</h4>
+      <p data-i18n="footer_location">София, България</p>
       <a href="tel:+359888123456" data-hover>+359 888 123 456</a>
     </div>
   </div>
   <div class="footer__bottom">
-    <span>© 2026 Design-Code — Интериорен дизайн</span>
+    <span data-i18n="footer_copyright">© 2026 Design-Code — Интериорен дизайн</span>
     <span class="socials">
       <a href="#" data-hover>Instagram</a>
       <a href="#" data-hover>Facebook</a>
@@ -97,14 +102,21 @@ const projectNav = () => `
     <img src="assets/logo.png" alt="Design-Code лого">
     <span class="nav__name">Design<em>—</em>Code</span>
   </a>
-  <a class="nav__back" href="projects.html" data-hover><span class="arr">&#8592;</span>Всички проекти</a>
+  <div class="nav__right">
+    <a class="nav__back" href="projects.html" data-hover><span class="arr">&#8592;</span><span data-i18n="back_to_projects">Всички проекти</span></a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="bg" aria-label="Български">BG</button>
+      <span>/</span>
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+    </div>
+  </div>
 </header>
 `;
 
 const projectFooter = () => `
 <footer class="p-footer">
   <img src="assets/logo.png" alt="Design-Code">
-  <span>© 2026 Design-Code — Интериорен дизайн</span>
+  <span data-i18n="footer_copyright">© 2026 Design-Code — Интериорен дизайн</span>
   <a href="mailto:info@design-code.bg" data-hover>info@design-code.bg</a>
 </footer>
 `;
@@ -112,13 +124,13 @@ const projectFooter = () => `
 function projectCard(p, index) {
   const num = String(index + 1).padStart(3, '0');
   return `
-    <a class="project reveal" data-hover href="project-${p.slug}.html">
-      <div class="project__info"><h3 class="project__name">${p.title}</h3><span class="project__num">/ ${num}</span></div>
-      <div class="project__frame"><img src="${p.hero}" alt="${p.title}" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-${p.slug}.html" data-i18n-project="${p.slug}" data-title-bg="${p.title}" data-title-en="${p.title_en}" data-type-bg="${p.type}" data-type-en="${p.type_en}" data-location-bg="${p.location}" data-location-en="${p.location_en}">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">${p.title}</h3><span class="project__num">/ ${num}</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="${p.hero}" alt="${p.title}" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>${p.type}</dd></div>
-        <div><dt>Локация</dt><dd>${p.location}</dd></div>
-        <div><dt>Година</dt><dd>${p.year}</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">${p.type}</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">${p.location}</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>${p.year}</dd></div>
       </dl>
     </a>`;
 }
@@ -461,8 +473,8 @@ img{display:block;max-width:100%}
 
 <div class="loader" id="loader">
   <div class="loader__pct" id="pct">00</div>
-  <div class="loader__line"><span>Интериорен</span></div>
-  <div class="loader__line"><span>Дизайн</span></div>
+  <div class="loader__line"><span data-i18n="loader_word_1">Интериорен</span></div>
+  <div class="loader__line"><span data-i18n="loader_word_2">Дизайн</span></div>
 </div>
 
 ${nav()}
@@ -473,47 +485,51 @@ ${nav()}
     <div class="hero__bg"><img src="assets/project-restaurant.jpg" alt="" aria-hidden="true"></div>
     <div class="hero__inner">
       <h1 class="hero__title">DESIGN—CODE</h1>
-      <p class="hero__tagline">Създаваме изключителни интериорни пространства, където функционалността среща изкуството. Всеки детайл е обмислен, всяка линия е създадена със страст.</p>
-      <a class="hero__btn" href="projects.html" data-hover>Разгледай проектите<span class="arr">&#8594;</span></a>
-      <span class="hero__scroll"><i></i>Скролирайте</span>
+      <p class="hero__tagline" data-i18n="hero_tagline">Създаваме изключителни интериорни пространства, където функционалността среща изкуството. Всеки детайл е обмислен, всяка линия е създадена със страст.</p>
+      <a class="hero__btn" href="projects.html" data-hover><span data-i18n="hero_cta">Разгледай проектите</span><span class="arr">&#8594;</span></a>
+      <span class="hero__scroll"><i></i><span data-i18n="hero_scroll">Скролирайте</span></span>
     </div>
   </section>
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee__track" id="marquee">
-      <span>Жилищни интериори <b>—</b></span><span>Търговски пространства <b>—</b></span><span>3D визуализации <b>—</b></span><span>Авторски надзор <b>—</b></span><span>Внимание към детайла <b>—</b></span>
+      <span data-i18n="marquee_residential" data-i18n-html="true">Жилищни интериори <b>—</b></span>
+      <span data-i18n="marquee_commercial" data-i18n-html="true">Търговски пространства <b>—</b></span>
+      <span data-i18n="marquee_3d" data-i18n-html="true">3D визуализации <b>—</b></span>
+      <span data-i18n="marquee_supervision" data-i18n-html="true">Авторски надзор <b>—</b></span>
+      <span data-i18n="marquee_detail" data-i18n-html="true">Внимание към детайла <b>—</b></span>
     </div>
   </div>
 
   <section class="section" id="spaces">
     <div class="section__head">
       <span class="section__index">01</span>
-      <h2 class="section__title"><span>Пространства, които проектираме</span></h2>
+      <h2 class="section__title"><span data-i18n="spaces_heading">Пространства, които проектираме</span></h2>
       <span class="section__rule"></span>
     </div>
     <div class="spaces">
       <div class="space reveal" data-space="1" data-hover>
         <span class="space__num">01</span>
-        <h3 class="space__name">Жилищни</h3>
-        <p class="space__desc">Домът отразява начина, по който животът се разгръща в него.</p>
+        <h3 class="space__name" data-i18n="space_residential">Жилищни</h3>
+        <p class="space__desc" data-i18n="space_residential_desc">Домът отразява начина, по който животът се разгръща в него.</p>
         <span class="space__arr">&#8594;</span>
       </div>
       <div class="space reveal" data-d="1" data-space="2" data-hover>
         <span class="space__num">02</span>
-        <h3 class="space__name">Хотелиерство</h3>
-        <p class="space__desc">Идентичността определя стойността на всяко гостоприемно пространство.</p>
+        <h3 class="space__name" data-i18n="space_hospitality">Хотелиерство</h3>
+        <p class="space__desc" data-i18n="space_hospitality_desc">Идентичността определя стойността на всяко гостоприемно пространство.</p>
         <span class="space__arr">&#8594;</span>
       </div>
       <div class="space reveal" data-d="2" data-space="3" data-hover>
         <span class="space__num">03</span>
-        <h3 class="space__name">Търговски</h3>
-        <p class="space__desc">Средата ви е вашето конкурентно предимство.</p>
+        <h3 class="space__name" data-i18n="space_commercial">Търговски</h3>
+        <p class="space__desc" data-i18n="space_commercial_desc">Средата ви е вашето конкурентно предимство.</p>
         <span class="space__arr">&#8594;</span>
       </div>
       <div class="space reveal" data-d="3" data-space="4" data-hover>
         <span class="space__num">04</span>
-        <h3 class="space__name">Спа &amp; Уелнес</h3>
-        <p class="space__desc">Спокойствието също се проектира — със светлина, текстура и тишина.</p>
+        <h3 class="space__name" data-i18n="space_spa_wellness">Спа &amp; Уелнес</h3>
+        <p class="space__desc" data-i18n="space_spa_wellness_desc">Спокойствието също се проектира — със светлина, текстура и тишина.</p>
         <span class="space__arr">&#8594;</span>
       </div>
     </div>
@@ -522,7 +538,7 @@ ${nav()}
   <section class="section" id="projects" style="padding-top:6vh">
     <div class="section__head">
       <span class="section__index">02</span>
-      <h2 class="section__title"><span>Избрани проекти</span></h2>
+      <h2 class="section__title"><span data-i18n="projects_selected">Избрани проекти</span></h2>
       <span class="section__counter">001&nbsp;/&nbsp;${String(projects.length).padStart(3,'0')}</span>
       <span class="section__rule"></span>
     </div>
@@ -530,14 +546,14 @@ ${nav()}
       ${cards}
     </div>
     <div class="view-all reveal">
-      <a href="projects.html" data-hover>Всички проекти<span class="arr">&#8594;</span></a>
+      <a href="projects.html" data-hover><span data-i18n="view_all_projects">Всички проекти</span><span class="arr">&#8594;</span></a>
     </div>
   </section>
 
   <section class="showreel">
     <div class="showreel__head">
-      <span class="showreel__label">03 — Видео</span>
-      <span class="showreel__hint">3D визуализация · Twinmotion</span>
+      <span class="showreel__label" data-i18n="showreel_label">03 — Видео</span>
+      <span class="showreel__hint" data-i18n="showreel_hint">3D визуализация · Twinmotion</span>
     </div>
     <div class="showreel__wrap reveal" data-hover>
       <video id="reel" src="assets/showreel.mp4" poster="assets/poster.jpg" preload="metadata" playsinline loop></video>
@@ -552,7 +568,7 @@ ${nav()}
   <section class="section" id="about">
     <div class="section__head">
       <span class="section__index">04</span>
-      <h2 class="section__title"><span>За нас</span></h2>
+      <h2 class="section__title"><span data-i18n="about_heading">За нас</span></h2>
       <span class="section__rule"></span>
     </div>
     <div class="about">
@@ -560,28 +576,29 @@ ${nav()}
         <div class="frame"><img src="assets/project-living.jpg" alt="Интериор от Design-Code" data-parallax="0.08"></div>
       </div>
       <div class="about__text">
-        <span class="about__since reveal">Design-Code · от 2018 г.</span>
-        <p class="about__lead reveal">Вярваме, че добрият интериор не се забелязва веднага — <em style="color:var(--accent);font-style:italic">той се усеща</em>.</p>
-        <p class="reveal" data-d="1"><strong>Design-Code</strong> е студио за интериорен дизайн, създадено от страст към пространството, светлината и материалите. Подхождаме към пространството отвъд естетиката — оформяме среди чрез логика, контекст и човешко преживяване.</p>
-        <p class="reveal" data-d="2">Всеки проект започва с разговор — за навиците, мечтите и начина ви на живот. От там нататък превръщаме идеите в пространства, които изглеждат безвремеви и се живеят лесно.</p>
+        <span class="about__since reveal" data-i18n="about_since">Design-Code · от 2018 г.</span>
+        <p class="about__lead reveal" data-i18n="about_lead" data-i18n-html="true">Вярваме, че добрият интериор не се забелязва веднага — <em style="color:var(--accent);font-style:italic">той се усеща</em>.</p>
+        <p class="reveal" data-d="1" data-i18n="about_p1" data-i18n-html="true"><strong>Design-Code</strong> е студио за интериорен дизайн, създадено от страст към пространството, светлината и материалите. Подхождаме към пространството отвъд естетиката — оформяме среди чрез логика, контекст и човешко преживяване.</p>
+        <p class="reveal" data-d="2" data-i18n="about_p2">Всеки проект започва с разговор — за навиците, мечтите и начина ви на живот. От там нататък превръщаме идеите в пространства, които изглеждат безвремеви и се живеят лесно.</p>
         <div class="stats">
-          <div class="stat reveal"><b>8+</b><span>години опит</span></div>
-          <div class="stat reveal" data-d="1"><b>60+</b><span>завършени проекта</span></div>
-          <div class="stat reveal" data-d="2"><b>100%</b><span>внимание към детайла</span></div>
+          <div class="stat reveal"><b>8+</b><span data-i18n="stat_years">години опит</span></div>
+          <div class="stat reveal" data-d="1"><b>60+</b><span data-i18n="stat_projects">завършени проекта</span></div>
+          <div class="stat reveal" data-d="2"><b>100%</b><span data-i18n="stat_detail">внимание към детайла</span></div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="cta" id="contact">
-    <h2 class="cta__big reveal">Какво трябва да направи<br>възможно <em>вашето пространство?</em></h2>
-    <a class="cta__btn reveal" data-d="1" href="contact.html" data-hover>Започнете разговор<span class="arr">&#8594;</span></a>
+    <h2 class="cta__big reveal" data-i18n="cta_heading" data-i18n-html="true">Какво трябва да направи<br>възможно <em>вашето пространство?</em></h2>
+    <a class="cta__btn reveal" data-d="1" href="contact.html" data-hover><span data-i18n="cta_button">Започнете разговор</span><span class="arr">&#8594;</span></a>
   </section>
 
 </main>
 
 ${mainFooter()}
 
+<script src="i18n.js"></script>
 <script src="assets/lenis.min.js"></script>
 <script>
 let lenis=null;
@@ -688,6 +705,7 @@ const reel=document.getElementById('reel'),btn=document.getElementById('reelBtn'
 btn.addEventListener('click',()=>{reel.play();btn.classList.add('hide')});
 reel.addEventListener('click',()=>{if(!reel.paused){reel.pause();btn.classList.remove('hide')}});
 </script>
+<script>i18n.initLanguage();</script>
 </body>
 </html>`;
 
@@ -716,9 +734,9 @@ ${baseHead('Проекти — Design-Code', 'Разгледайте нашит�
 ${nav()}
 <main>
   <section class="list-hero">
-    <p class="list-hero__index">Портфолио</p>
-    <h1 class="list-hero__title"><span>Всички проекти</span></h1>
-    <p class="list-hero__sub">${projects.length} завършени интериорни проекта — от жилищни интериори до търговски и обществени пространства.</p>
+    <p class="list-hero__index" data-i18n="list_portfolio">Портфолио</p>
+    <h1 class="list-hero__title"><span data-i18n="list_title">Всички проекти</span></h1>
+    <p class="list-hero__sub"><span data-i18n-project-field="count" data-count-bg="${projects.length}" data-count-en="${projects.length}">${projects.length}</span> <span data-i18n="list_sub">завършени интериорни проекта — от жилищни интериори до търговски и обществени пространства.</span></p>
   </section>
   <section class="section projects-list" id="projects">
     <div class="projects">
@@ -727,7 +745,9 @@ ${nav()}
   </section>
 </main>
 ${mainFooter()}
+<script src="i18n.js"></script>
 <script src="project.js"></script>
+<script>i18n.initLanguage();</script>
 </body>
 </html>`;
 
@@ -758,12 +778,12 @@ function generateProjectPage(p, index) {
   }
 
   const metaItems = [
-    { dt: 'Тип', dd: p.type },
-    { dt: 'Локация', dd: p.location },
-    { dt: 'Година', dd: p.year },
+    { key: 'meta_type', dd: p.type, field: 'type' },
+    { key: 'meta_location', dd: p.location, field: 'location' },
+    { key: 'meta_year', dd: p.year },
   ];
-  if (p.area) metaItems.push({ dt: 'Площ', dd: p.area });
-  const metaHtml = metaItems.map(m => `<div><dt>${m.dt}</dt><dd>${m.dd}</dd></div>`).join('');
+  if (p.area) metaItems.push({ key: 'meta_area', dd: p.area });
+  const metaHtml = metaItems.map(m => `<div><dt data-i18n="${m.key}">${m.key === 'meta_type' ? 'Тип' : m.key === 'meta_location' ? 'Локация' : m.key === 'meta_year' ? 'Година' : 'Площ'}</dt><dd${m.field ? ` data-i18n-project-field="${m.field}"` : ''}>${m.dd}</dd></div>`).join('');
 
   const html = `<!DOCTYPE html>
 <html lang="bg">
@@ -777,9 +797,9 @@ ${projectNav()}
 <main>
   <section class="p-hero">
     <div class="p-hero__bg"><img src="${p.hero}" alt="${p.title}"></div>
-    <div class="p-hero__inner">
-      <p class="p-hero__index">Проект / ${num}</p>
-      <h1 class="p-hero__title"><span>${p.title}</span></h1>
+    <div class="p-hero__inner" data-i18n-project="${p.slug}" data-title-bg="${p.title}" data-title-en="${p.title_en}" data-type-bg="${p.type}" data-type-en="${p.type_en}" data-location-bg="${p.location}" data-location-en="${p.location_en}" data-lead-bg="${p.lead}" data-lead-en="${p.lead_en}" data-description-bg="${p.description}" data-description-en="${p.description_en}">
+      <p class="p-hero__index"><span data-i18n="project_label">Проект</span> / ${num}</p>
+      <h1 class="p-hero__title"><span data-i18n-project-field="title">${p.title}</span></h1>
       <dl class="p-hero__meta">
         ${metaHtml}
       </dl>
@@ -787,9 +807,9 @@ ${projectNav()}
   </section>
 
   <section class="p-overview">
-    <h2 class="p-overview__lead reveal">${p.lead}</h2>
+    <h2 class="p-overview__lead reveal" data-i18n-project-field="lead">${p.lead}</h2>
     <div class="p-overview__text reveal" data-d="1">
-      <p>${p.description}</p>
+      <p data-i18n-project-field="description">${p.description}</p>
     </div>
   </section>
 
@@ -797,13 +817,15 @@ ${projectNav()}
     ${galleryHtml}
   </section>
 
-  <a class="p-next" href="project-${next.slug}.html" data-hover>
-    <p class="p-next__label">Следващ проект</p>
-    <h2 class="p-next__name">${next.title}<span class="arr">&#8594;</span></h2>
+  <a class="p-next" href="project-${next.slug}.html" data-hover data-i18n-project="${next.slug}" data-title-bg="${next.title}" data-title-en="${next.title_en}">
+    <p class="p-next__label" data-i18n="next_project">Следващ проект</p>
+    <h2 class="p-next__name"><span data-i18n-project-field="title">${next.title}</span><span class="arr">&#8594;</span></h2>
   </a>
 </main>
 ${projectFooter()}
+<script src="i18n.js"></script>
 <script src="project.js"></script>
+<script>i18n.initLanguage();</script>
 </body>
 </html>`;
 

@@ -20,25 +20,32 @@
     <img src="assets/logo.png" alt="Design-Code лого">
     <span class="nav__name">Design<em>—</em>Code</span>
   </a>
-  <a class="nav__back" href="projects.html" data-hover><span class="arr">&#8592;</span>Всички проекти</a>
+  <div class="nav__right">
+    <a class="nav__back" href="projects.html" data-hover><span class="arr">&#8592;</span><span data-i18n="back_to_projects">Всички проекти</span></a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="bg" aria-label="Български">BG</button>
+      <span>/</span>
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+    </div>
+  </div>
 </header>
 
 <main>
   <section class="p-hero">
     <div class="p-hero__bg"><img src="assets/projects/black-wood-elegance/img-6149.jpg" alt="Black Wood Elegance"></div>
-    <div class="p-hero__inner">
-      <p class="p-hero__index">Проект / 016</p>
-      <h1 class="p-hero__title"><span>Black Wood Elegance</span></h1>
+    <div class="p-hero__inner" data-i18n-project="black-wood-elegance" data-title-bg="Black Wood Elegance" data-title-en="Black Wood Elegance" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia" data-lead-bg="Проект Black Wood Elegance — жилище в София от 2020 г." data-lead-en="Project Black Wood Elegance — Residential in Sofia, 2020." data-description-bg="Black Wood Elegance е интериорен проект в София, реализиран през 2020 г. Решението съчетава функционалност, елегантност и внимание към детайла." data-description-en="Black Wood Elegance is an interior design project in Sofia, completed in 2020. The solution combines functionality, elegance, and attention to detail.">
+      <p class="p-hero__index"><span data-i18n="project_label">Проект</span> / 016</p>
+      <h1 class="p-hero__title"><span data-i18n-project-field="title">Black Wood Elegance</span></h1>
       <dl class="p-hero__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div><div><dt>Локация</dt><dd>София</dd></div><div><dt>Година</dt><dd>2020</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div><div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div><div><dt data-i18n="meta_year">Година</dt><dd>2020</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="p-overview">
-    <h2 class="p-overview__lead reveal">Проект Black Wood Elegance — жилище в София от 2020 г.</h2>
+    <h2 class="p-overview__lead reveal" data-i18n-project-field="lead">Проект Black Wood Elegance — жилище в София от 2020 г.</h2>
     <div class="p-overview__text reveal" data-d="1">
-      <p>Black Wood Elegance е интериорен проект в София, реализиран през 2020 г. Решението съчетава функционалност, елегантност и внимание към детайла.</p>
+      <p data-i18n-project-field="description">Black Wood Elegance е интериорен проект в София, реализиран през 2020 г. Решението съчетава функционалност, елегантност и внимание към детайла.</p>
     </div>
   </section>
 
@@ -58,18 +65,20 @@
       </figure>
   </section>
 
-  <a class="p-next" href="project-delta-hill-house.html" data-hover>
-    <p class="p-next__label">Следващ проект</p>
-    <h2 class="p-next__name">Delta Hill House<span class="arr">&#8594;</span></h2>
+  <a class="p-next" href="project-delta-hill-house.html" data-hover data-i18n-project="delta-hill-house" data-title-bg="Delta Hill House" data-title-en="Delta Hill House">
+    <p class="p-next__label" data-i18n="next_project">Следващ проект</p>
+    <h2 class="p-next__name"><span data-i18n-project-field="title">Delta Hill House</span><span class="arr">&#8594;</span></h2>
   </a>
 </main>
 
 <footer class="p-footer">
   <img src="assets/logo.png" alt="Design-Code">
-  <span>© 2026 Design-Code — Интериорен дизайн</span>
+  <span data-i18n="footer_copyright">© 2026 Design-Code — Интериорен дизайн</span>
   <a href="mailto:info@design-code.bg" data-hover>info@design-code.bg</a>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="project.js"></script>
+<script>i18n.initLanguage();</script>
 </body>
 </html>

@@ -41,7 +41,12 @@
       ],
       "lead": "Проект In Line — жилище в София от 2022 г.",
       "description": "In Line е интериорен проект в София, реализиран през 2022 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": true
+      "featured": true,
+      "title_en": "In Line",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project In Line — Residential in Sofia, 2022.",
+      "description_en": "In Line is an interior design project in Sofia, completed in 2022. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "dental-clinic-green-apple",
@@ -71,7 +76,12 @@
       ],
       "lead": "Проект Dental Clinic Green Apple — жилище в София от 2019 г.",
       "description": "Dental Clinic Green Apple е интериорен проект в София, реализиран през 2019 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Dental Clinic Green Apple",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Dental Clinic Green Apple — Residential in Sofia, 2019.",
+      "description_en": "Dental Clinic Green Apple is an interior design project in Sofia, completed in 2019. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "green-cottage",
@@ -115,7 +125,12 @@
       ],
       "lead": "Проект Green Cottage — жилище в Св. Константин и Елена от 2024 г.",
       "description": "Green Cottage е интериорен проект в Св. Константин и Елена, реализиран през 2024 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": true
+      "featured": true,
+      "title_en": "Green Cottage",
+      "type_en": "Residential",
+      "location_en": "St. Constantine and Helena",
+      "lead_en": "Project Green Cottage — Residential in St. Constantine and Helena, 2024.",
+      "description_en": "Green Cottage is an interior design project in St. Constantine and Helena, completed in 2024. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "arizona-dream",
@@ -147,7 +162,12 @@
       ],
       "lead": "Проект Arizona Dream — бунгало в Аризона от 2020 г.",
       "description": "Arizona Dream е интериорен проект в Аризона, реализиран през 2020 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Arizona Dream",
+      "type_en": "Bungalow",
+      "location_en": "Arizona",
+      "lead_en": "Project Arizona Dream — Bungalow in Arizona, 2020.",
+      "description_en": "Arizona Dream is an interior design project in Arizona, completed in 2020. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "botevgrad-ap-3d",
@@ -180,7 +200,12 @@
       ],
       "lead": "Проект Botevgrad Apartment 3D — жилище в София от 2024 г.",
       "description": "Botevgrad Apartment 3D е интериорен проект в София, реализиран през 2024 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Botevgrad Apartment 3D",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Botevgrad Apartment 3D — Residential in Sofia, 2024.",
+      "description_en": "Botevgrad Apartment 3D is an interior design project in Sofia, completed in 2024. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "cannes",
@@ -196,7 +221,12 @@
       ],
       "lead": "Проект Cannes — жилище в Cannes от 2024 г.",
       "description": "Cannes е интериорен проект в Cannes, реализиран през 2024 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Cannes",
+      "type_en": "Residential",
+      "location_en": "Cannes",
+      "lead_en": "Project Cannes — Residential in Cannes, 2024.",
+      "description_en": "Cannes is an interior design project in Cannes, completed in 2024. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "ivan-vazov-ap",
@@ -309,7 +339,12 @@
       ],
       "lead": "Проект Ivan Vazov Apartment — жилище в София от 2017 г.",
       "description": "Ivan Vazov Apartment е интериорен проект в София, реализиран през 2017 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": true
+      "featured": true,
+      "title_en": "Ivan Vazov Apartment",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Ivan Vazov Apartment — Residential in Sofia, 2017.",
+      "description_en": "Ivan Vazov Apartment is an interior design project in Sofia, completed in 2017. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "john-galliano-office-sofia",
@@ -346,7 +381,12 @@
       ],
       "lead": "Проект John Galliano Office Sofia — офис в София от 2016 г.",
       "description": "John Galliano Office Sofia е интериорен проект в София, реализиран през 2016 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": true
+      "featured": true,
+      "title_en": "John Galliano Office Sofia",
+      "type_en": "Office",
+      "location_en": "Sofia",
+      "lead_en": "Project John Galliano Office Sofia — Office in Sofia, 2016.",
+      "description_en": "John Galliano Office Sofia is an interior design project in Sofia, completed in 2016. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "natalie",
@@ -367,7 +407,12 @@
       ],
       "lead": "Проект Natalie — жилище в София от 2022 г.",
       "description": "Natalie е интериорен проект в София, реализиран през 2022 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Natalie",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Natalie — Residential in Sofia, 2022.",
+      "description_en": "Natalie is an interior design project in Sofia, completed in 2022. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "office-2",
@@ -386,7 +431,12 @@
       ],
       "lead": "Проект Office 2 — жилище в София от 2021 г.",
       "description": "Office 2 е интериорен проект в София, реализиран през 2021 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Office 2",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Office 2 — Residential in Sofia, 2021.",
+      "description_en": "Office 2 is an interior design project in Sofia, completed in 2021. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "parsa-sohi",
@@ -409,7 +459,12 @@
       ],
       "lead": "Проект Parsa Sohi — жилище в София от 2021 г.",
       "description": "Parsa Sohi е интериорен проект в София, реализиран през 2021 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Parsa Sohi",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Parsa Sohi — Residential in Sofia, 2021.",
+      "description_en": "Parsa Sohi is an interior design project in Sofia, completed in 2021. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "pernik-ap",
@@ -429,7 +484,12 @@
       ],
       "lead": "Проект Pernik Apartment — жилище в София от 2016 г.",
       "description": "Pernik Apartment е интериорен проект в София, реализиран през 2016 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Pernik Apartment",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Pernik Apartment — Residential in Sofia, 2016.",
+      "description_en": "Pernik Apartment is an interior design project in Sofia, completed in 2016. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "antre-botevgrad",
@@ -448,7 +508,12 @@
       ],
       "lead": "Проект Antre Botevgrad — жилище в София от 2015 г.",
       "description": "Antre Botevgrad е интериорен проект в София, реализиран през 2015 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Antre Botevgrad",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Antre Botevgrad — Residential in Sofia, 2015.",
+      "description_en": "Antre Botevgrad is an interior design project in Sofia, completed in 2015. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "ap-sofia",
@@ -480,7 +545,12 @@
       ],
       "lead": "Проект Apartment Sofia — жилище в София от 2017 г.",
       "description": "Apartment Sofia е интериорен проект в София, реализиран през 2017 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Apartment Sofia",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Apartment Sofia — Residential in Sofia, 2017.",
+      "description_en": "Apartment Sofia is an interior design project in Sofia, completed in 2017. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "beach-bungaloo",
@@ -506,7 +576,12 @@
       ],
       "lead": "Проект Beach Bungaloo — жилище в Sea от 2016 г.",
       "description": "Beach Bungaloo е интериорен проект в Sea, реализиран през 2016 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Beach Bungaloo",
+      "type_en": "Residential",
+      "location_en": "Sea",
+      "lead_en": "Project Beach Bungaloo — Residential in Sea, 2016.",
+      "description_en": "Beach Bungaloo is an interior design project in Sea, completed in 2016. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "black-wood-elegance",
@@ -527,7 +602,12 @@
       ],
       "lead": "Проект Black Wood Elegance — жилище в София от 2020 г.",
       "description": "Black Wood Elegance е интериорен проект в София, реализиран през 2020 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Black Wood Elegance",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Black Wood Elegance — Residential in Sofia, 2020.",
+      "description_en": "Black Wood Elegance is an interior design project in Sofia, completed in 2020. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "delta-hill-house",
@@ -561,7 +641,12 @@
       ],
       "lead": "Проект Delta Hill House — жилище в с. Кладница от 2014 г.",
       "description": "Delta Hill House е интериорен проект в с. Кладница, реализиран през 2014 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Delta Hill House",
+      "type_en": "Residential",
+      "location_en": "Kladnitsa village",
+      "lead_en": "Project Delta Hill House — Residential in Kladnitsa village, 2014.",
+      "description_en": "Delta Hill House is an interior design project in Kladnitsa village, completed in 2014. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "diamant-2",
@@ -592,7 +677,12 @@
       ],
       "lead": "Проект Diamant 2 — жилище в София от 2022 г.",
       "description": "Diamant 2 е интериорен проект в София, реализиран през 2022 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Diamant 2",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Diamant 2 — Residential in Sofia, 2022.",
+      "description_en": "Diamant 2 is an interior design project in Sofia, completed in 2022. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "grey-white",
@@ -615,7 +705,12 @@
       ],
       "lead": "Проект Grey & White — жилище в София от 2020 г.",
       "description": "Grey & White е интериорен проект в София, реализиран през 2020 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Grey & White",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Grey & White — Residential in Sofia, 2020.",
+      "description_en": "Grey & White is an interior design project in Sofia, completed in 2020. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "industrial-kitchen",
@@ -633,7 +728,12 @@
       ],
       "lead": "Проект Industrial Kitchen — жилище в София от 2019 г.",
       "description": "Industrial Kitchen е интериорен проект в София, реализиран през 2019 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Industrial Kitchen",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Industrial Kitchen — Residential in Sofia, 2019.",
+      "description_en": "Industrial Kitchen is an interior design project in Sofia, completed in 2019. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "mediteranean",
@@ -662,7 +762,12 @@
       ],
       "lead": "Проект Mediteranean — жилище в София от 2020 г.",
       "description": "Mediteranean е интериорен проект в София, реализиран през 2020 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Mediteranean",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Mediteranean — Residential in Sofia, 2020.",
+      "description_en": "Mediteranean is an interior design project in Sofia, completed in 2020. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "office-kazbek",
@@ -684,7 +789,12 @@
       ],
       "lead": "Проект Office Kazbek — офис в София от 2024 г.",
       "description": "Office Kazbek е интериорен проект в София, реализиран през 2024 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Office Kazbek",
+      "type_en": "Office",
+      "location_en": "Sofia",
+      "lead_en": "Project Office Kazbek — Office in Sofia, 2024.",
+      "description_en": "Office Kazbek is an interior design project in Sofia, completed in 2024. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "white-ap-modern",
@@ -745,7 +855,12 @@
       ],
       "lead": "Проект White Apartment Modern — жилище в София от 2015 г.",
       "description": "White Apartment Modern е интериорен проект в София, реализиран през 2015 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": true
+      "featured": true,
+      "title_en": "White Apartment Modern",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project White Apartment Modern — Residential in Sofia, 2015.",
+      "description_en": "White Apartment Modern is an interior design project in Sofia, completed in 2015. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "kasa-dragalevtsi",
@@ -784,7 +899,12 @@
       ],
       "lead": "Проект House Dragalevtsi — жилище в София от 2018 г.",
       "description": "House Dragalevtsi е интериорен проект в София, реализиран през 2018 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": true
+      "featured": true,
+      "title_en": "House Dragalevtsi",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project House Dragalevtsi — Residential in Sofia, 2018.",
+      "description_en": "House Dragalevtsi is an interior design project in Sofia, completed in 2018. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "nashiya-ofis",
@@ -815,7 +935,12 @@
       ],
       "lead": "Проект Our Office — жилище в София от 2024 г.",
       "description": "Our Office е интериорен проект в София, реализиран през 2024 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Our Office",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Our Office — Residential in Sofia, 2024.",
+      "description_en": "Our Office is an interior design project in Sofia, completed in 2024. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "mezonet-2018",
@@ -841,7 +966,12 @@
       ],
       "lead": "Проект Mezonet 2018 — жилище в София от 2018 г.",
       "description": "Mezonet 2018 е интериорен проект в София, реализиран през 2018 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Mezonet 2018",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Mezonet 2018 — Residential in Sofia, 2018.",
+      "description_en": "Mezonet 2018 is an interior design project in Sofia, completed in 2018. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "kasa-ivanyane",
@@ -867,7 +997,12 @@
       ],
       "lead": "Проект къща Иваняне — жилище в Иваняне от 2022 г.",
       "description": "къща Иваняне е интериорен проект в Иваняне, реализиран през 2022 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "House Ivanyane",
+      "type_en": "Residential",
+      "location_en": "Ivanyane",
+      "lead_en": "Project House Ivanyane — Residential in Ivanyane, 2022.",
+      "description_en": "House Ivanyane is an interior design project in Ivanyane, completed in 2022. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "tropical-clinic",
@@ -880,7 +1015,12 @@
       "gallery": [],
       "lead": "Проект Tropical Clinic — обществен обект в София от 2022 г.",
       "description": "Tropical Clinic е интериорен проект в София, реализиран през 2022 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Tropical Clinic",
+      "type_en": "Public Space",
+      "location_en": "Sofia",
+      "lead_en": "Project Tropical Clinic — Public Space in Sofia, 2022.",
+      "description_en": "Tropical Clinic is an interior design project in Sofia, completed in 2022. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "modern-kitchen",
@@ -901,7 +1041,12 @@
       ],
       "lead": "Проект Modern Kitchen — жилище в София от 2016 г.",
       "description": "Modern Kitchen е интериорен проект в София, реализиран през 2016 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Modern Kitchen",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Modern Kitchen — Residential in Sofia, 2016.",
+      "description_en": "Modern Kitchen is an interior design project in Sofia, completed in 2016. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "house-sandanski",
@@ -923,7 +1068,12 @@
       ],
       "lead": "Проект House Sandanski — жилище в Сандански от 2014 г.",
       "description": "House Sandanski е интериорен проект в Сандански, реализиран през 2014 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "House Sandanski",
+      "type_en": "Residential",
+      "location_en": "Sandanski",
+      "lead_en": "Project House Sandanski — Residential in Sandanski, 2014.",
+      "description_en": "House Sandanski is an interior design project in Sandanski, completed in 2014. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "smolqn-ap",
@@ -946,7 +1096,12 @@
       ],
       "lead": "Проект Smolqn Apartment — жилище в Смолян от 2015 г.",
       "description": "Smolqn Apartment е интериорен проект в Смолян, реализиран през 2015 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Smolqn Apartment",
+      "type_en": "Residential",
+      "location_en": "Smolyan",
+      "lead_en": "Project Smolqn Apartment — Residential in Smolyan, 2015.",
+      "description_en": "Smolqn Apartment is an interior design project in Smolyan, completed in 2015. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "mansarda-pod-nebeto",
@@ -979,7 +1134,12 @@
       ],
       "lead": "Проект Мансарда под небето — жилище в София от 2016 г.",
       "description": "Мансарда под небето е интериорен проект в София, реализиран през 2016 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Attic under the sky",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Attic under the sky — Residential in Sofia, 2016.",
+      "description_en": "Attic under the sky is an interior design project in Sofia, completed in 2016. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "neoclassical-ap",
@@ -1001,7 +1161,12 @@
       ],
       "lead": "Проект Neoclassical Apartment — жилище в София от 2020 г.",
       "description": "Neoclassical Apartment е интериорен проект в София, реализиран през 2020 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Neoclassical Apartment",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Neoclassical Apartment — Residential in Sofia, 2020.",
+      "description_en": "Neoclassical Apartment is an interior design project in Sofia, completed in 2020. The solution combines functionality, elegance, and attention to detail."
     },
     {
       "slug": "mezonet",
@@ -1024,7 +1189,12 @@
       ],
       "lead": "Проект Мезонет — жилище в София от 2017 г.",
       "description": "Мезонет е интериорен проект в София, реализиран през 2017 г. Решението съчетава функционалност, елегантност и внимание към детайла.",
-      "featured": false
+      "featured": false,
+      "title_en": "Maisonette",
+      "type_en": "Residential",
+      "location_en": "Sofia",
+      "lead_en": "Project Maisonette — Residential in Sofia, 2017.",
+      "description_en": "Maisonette is an interior design project in Sofia, completed in 2017. The solution combines functionality, elegance, and attention to detail."
     }
   ]
 }

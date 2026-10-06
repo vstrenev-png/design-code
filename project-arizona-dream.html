@@ -20,25 +20,32 @@
     <img src="assets/logo.png" alt="Design-Code лого">
     <span class="nav__name">Design<em>—</em>Code</span>
   </a>
-  <a class="nav__back" href="projects.html" data-hover><span class="arr">&#8592;</span>Всички проекти</a>
+  <div class="nav__right">
+    <a class="nav__back" href="projects.html" data-hover><span class="arr">&#8592;</span><span data-i18n="back_to_projects">Всички проекти</span></a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="bg" aria-label="Български">BG</button>
+      <span>/</span>
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+    </div>
+  </div>
 </header>
 
 <main>
   <section class="p-hero">
     <div class="p-hero__bg"><img src="assets/projects/arizona-dream/accamera1.jpg" alt="Arizona Dream"></div>
-    <div class="p-hero__inner">
-      <p class="p-hero__index">Проект / 004</p>
-      <h1 class="p-hero__title"><span>Arizona Dream</span></h1>
+    <div class="p-hero__inner" data-i18n-project="arizona-dream" data-title-bg="Arizona Dream" data-title-en="Arizona Dream" data-type-bg="Бунгало" data-type-en="Bungalow" data-location-bg="Аризона" data-location-en="Arizona" data-lead-bg="Проект Arizona Dream — бунгало в Аризона от 2020 г." data-lead-en="Project Arizona Dream — Bungalow in Arizona, 2020." data-description-bg="Arizona Dream е интериорен проект в Аризона, реализиран през 2020 г. Решението съчетава функционалност, елегантност и внимание към детайла." data-description-en="Arizona Dream is an interior design project in Arizona, completed in 2020. The solution combines functionality, elegance, and attention to detail.">
+      <p class="p-hero__index"><span data-i18n="project_label">Проект</span> / 004</p>
+      <h1 class="p-hero__title"><span data-i18n-project-field="title">Arizona Dream</span></h1>
       <dl class="p-hero__meta">
-        <div><dt>Тип</dt><dd>Бунгало</dd></div><div><dt>Локация</dt><dd>Аризона</dd></div><div><dt>Година</dt><dd>2020</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Бунгало</dd></div><div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">Аризона</dd></div><div><dt data-i18n="meta_year">Година</dt><dd>2020</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="p-overview">
-    <h2 class="p-overview__lead reveal">Проект Arizona Dream — бунгало в Аризона от 2020 г.</h2>
+    <h2 class="p-overview__lead reveal" data-i18n-project-field="lead">Проект Arizona Dream — бунгало в Аризона от 2020 г.</h2>
     <div class="p-overview__text reveal" data-d="1">
-      <p>Arizona Dream е интериорен проект в Аризона, реализиран през 2020 г. Решението съчетава функционалност, елегантност и внимание към детайла.</p>
+      <p data-i18n-project-field="description">Arizona Dream е интериорен проект в Аризона, реализиран през 2020 г. Решението съчетава функционалност, елегантност и внимание към детайла.</p>
     </div>
   </section>
 
@@ -78,18 +85,20 @@
       </figure><figure class="full reveal"><img src="assets/projects/arizona-dream/accamera9.jpg" alt="Arizona Dream" data-parallax="0.07"></figure>
   </section>
 
-  <a class="p-next" href="project-botevgrad-ap-3d.html" data-hover>
-    <p class="p-next__label">Следващ проект</p>
-    <h2 class="p-next__name">Botevgrad Apartment 3D<span class="arr">&#8594;</span></h2>
+  <a class="p-next" href="project-botevgrad-ap-3d.html" data-hover data-i18n-project="botevgrad-ap-3d" data-title-bg="Botevgrad Apartment 3D" data-title-en="Botevgrad Apartment 3D">
+    <p class="p-next__label" data-i18n="next_project">Следващ проект</p>
+    <h2 class="p-next__name"><span data-i18n-project-field="title">Botevgrad Apartment 3D</span><span class="arr">&#8594;</span></h2>
   </a>
 </main>
 
 <footer class="p-footer">
   <img src="assets/logo.png" alt="Design-Code">
-  <span>© 2026 Design-Code — Интериорен дизайн</span>
+  <span data-i18n="footer_copyright">© 2026 Design-Code — Интериорен дизайн</span>
   <a href="mailto:info@design-code.bg" data-hover>info@design-code.bg</a>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="project.js"></script>
+<script>i18n.initLanguage();</script>
 </body>
 </html>

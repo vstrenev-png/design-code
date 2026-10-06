@@ -30,344 +30,349 @@
     <span class="nav__name">Design<em>—</em>Code</span>
   </a>
   <nav class="nav__links">
-    <div class="nav__item"><a href="projects.html" data-hover>Проекти</a></div>
+    <div class="nav__item"><a href="projects.html" data-hover data-i18n="nav_projects">Проекти</a></div>
     <div class="nav__item" id="svcDrop">
-      <button class="nav__drop-btn" data-hover>Услуги<span class="plus">+</span></button>
+      <button class="nav__drop-btn" data-hover><span data-i18n="nav_services">Услуги</span><span class="plus">+</span></button>
       <div class="dropdown">
-        <a href="index.html#spaces" data-hover><i>01</i>Жилищни</a>
-        <a href="index.html#spaces" data-hover><i>02</i>Хотелиерство</a>
-        <a href="index.html#spaces" data-hover><i>03</i>Търговски</a>
-        <a href="index.html#spaces" data-hover><i>04</i>Спа &amp; Уелнес</a>
+        <a href="index.html#spaces" data-hover><i>01</i><span data-i18n="nav_residential">Жилищни</span></a>
+        <a href="index.html#spaces" data-hover><i>02</i><span data-i18n="nav_hospitality">Хотелиерство</span></a>
+        <a href="index.html#spaces" data-hover><i>03</i><span data-i18n="nav_commercial">Търговски</span></a>
+        <a href="index.html#spaces" data-hover><i>04</i><span data-i18n="nav_spa_wellness">Спа &amp; Уелнес</span></a>
       </div>
     </div>
-    <div class="nav__item"><a href="index.html#about" data-hover>За нас</a></div>
-    <div class="nav__item"><a href="contact.html" data-hover>Контакти</a></div>
-    <div class="nav__item"><a href="questions-and-answers.html" data-hover>Препоръки</a></div>
+    <div class="nav__item"><a href="index.html#about" data-hover data-i18n="nav_about">За нас</a></div>
+    <div class="nav__item"><a href="contact.html" data-hover data-i18n="nav_contacts">Контакти</a></div>
+    <div class="nav__item"><a href="questions-and-answers.html" data-hover data-i18n="nav_recommendations">Препоръки</a></div>
   </nav>
+  <div class="lang-switch">
+    <button class="lang-btn active" data-lang="bg" aria-label="Български">BG</button>
+    <span>/</span>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+  </div>
   <button class="burger" id="burger" aria-label="Меню" data-hover><span></span><span></span></button>
 </header>
 
 <div class="menu-overlay" id="menu">
-  <a href="projects.html" data-hover>Проекти</a>
-  <a href="index.html#spaces" data-hover>Услуги</a>
-  <a href="index.html#about" data-hover>За нас</a>
-  <a href="contact.html" data-hover>Контакти</a>
-  <a href="questions-and-answers.html" data-hover>Препоръки</a>
+  <a href="projects.html" data-hover data-i18n="nav_projects">Проекти</a>
+  <a href="index.html#spaces" data-hover data-i18n="nav_services">Услуги</a>
+  <a href="index.html#about" data-hover data-i18n="nav_about">За нас</a>
+  <a href="contact.html" data-hover data-i18n="nav_contacts">Контакти</a>
+  <a href="questions-and-answers.html" data-hover data-i18n="nav_recommendations">Препоръки</a>
 </div>
 
 <main>
   <section class="list-hero">
-    <p class="list-hero__index">Портфолио</p>
-    <h1 class="list-hero__title"><span>Всички проекти</span></h1>
-    <p class="list-hero__sub">34 завършени интериорни проекта — от жилищни интериори до търговски и обществени пространства.</p>
+    <p class="list-hero__index" data-i18n="list_portfolio">Портфолио</p>
+    <h1 class="list-hero__title"><span data-i18n="list_title">Всички проекти</span></h1>
+    <p class="list-hero__sub"><span data-i18n-project-field="count" data-count-bg="34" data-count-en="34">34</span> <span data-i18n="list_sub">завършени интериорни проекта — от жилищни интериори до търговски и обществени пространства.</span></p>
   </section>
   <section class="section projects-list" id="projects">
     <div class="projects">
       
-    <a class="project reveal" data-hover href="project-in-line.html">
-      <div class="project__info"><h3 class="project__name">In Line</h3><span class="project__num">/ 001</span></div>
-      <div class="project__frame"><img src="assets/projects/in-line/accamera-new1-1-1.jpg" alt="In Line" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-in-line.html" data-i18n-project="in-line" data-title-bg="In Line" data-title-en="In Line" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">In Line</h3><span class="project__num">/ 001</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/in-line/accamera-new1-1-1.jpg" alt="In Line" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2022</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2022</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-dental-clinic-green-apple.html">
-      <div class="project__info"><h3 class="project__name">Dental Clinic Green Apple</h3><span class="project__num">/ 002</span></div>
-      <div class="project__frame"><img src="assets/projects/dental-clinic-green-apple/img-7256.jpg" alt="Dental Clinic Green Apple" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-dental-clinic-green-apple.html" data-i18n-project="dental-clinic-green-apple" data-title-bg="Dental Clinic Green Apple" data-title-en="Dental Clinic Green Apple" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Dental Clinic Green Apple</h3><span class="project__num">/ 002</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/dental-clinic-green-apple/img-7256.jpg" alt="Dental Clinic Green Apple" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2019</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2019</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-green-cottage.html">
-      <div class="project__info"><h3 class="project__name">Green Cottage</h3><span class="project__num">/ 003</span></div>
-      <div class="project__frame"><img src="assets/projects/green-cottage/accamera-outdoor1-1.jpg" alt="Green Cottage" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-green-cottage.html" data-i18n-project="green-cottage" data-title-bg="Green Cottage" data-title-en="Green Cottage" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="Св. Константин и Елена" data-location-en="St. Constantine and Helena">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Green Cottage</h3><span class="project__num">/ 003</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/green-cottage/accamera-outdoor1-1.jpg" alt="Green Cottage" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>Св. Константин и Елена</dd></div>
-        <div><dt>Година</dt><dd>2024</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">Св. Константин и Елена</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2024</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-arizona-dream.html">
-      <div class="project__info"><h3 class="project__name">Arizona Dream</h3><span class="project__num">/ 004</span></div>
-      <div class="project__frame"><img src="assets/projects/arizona-dream/accamera1.jpg" alt="Arizona Dream" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-arizona-dream.html" data-i18n-project="arizona-dream" data-title-bg="Arizona Dream" data-title-en="Arizona Dream" data-type-bg="Бунгало" data-type-en="Bungalow" data-location-bg="Аризона" data-location-en="Arizona">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Arizona Dream</h3><span class="project__num">/ 004</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/arizona-dream/accamera1.jpg" alt="Arizona Dream" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Бунгало</dd></div>
-        <div><dt>Локация</dt><dd>Аризона</dd></div>
-        <div><dt>Година</dt><dd>2020</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Бунгало</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">Аризона</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2020</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-botevgrad-ap-3d.html">
-      <div class="project__info"><h3 class="project__name">Botevgrad Apartment 3D</h3><span class="project__num">/ 005</span></div>
-      <div class="project__frame"><img src="assets/projects/botevgrad-ap-3d/antre-last1-1.jpg" alt="Botevgrad Apartment 3D" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-botevgrad-ap-3d.html" data-i18n-project="botevgrad-ap-3d" data-title-bg="Botevgrad Apartment 3D" data-title-en="Botevgrad Apartment 3D" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Botevgrad Apartment 3D</h3><span class="project__num">/ 005</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/botevgrad-ap-3d/antre-last1-1.jpg" alt="Botevgrad Apartment 3D" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2024</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2024</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-cannes.html">
-      <div class="project__info"><h3 class="project__name">Cannes</h3><span class="project__num">/ 006</span></div>
-      <div class="project__frame"><img src="assets/projects/cannes/img-3793.jpg" alt="Cannes" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-cannes.html" data-i18n-project="cannes" data-title-bg="Cannes" data-title-en="Cannes" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="Cannes" data-location-en="Cannes">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Cannes</h3><span class="project__num">/ 006</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/cannes/img-3793.jpg" alt="Cannes" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>Cannes</dd></div>
-        <div><dt>Година</dt><dd>2024</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">Cannes</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2024</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-ivan-vazov-ap.html">
-      <div class="project__info"><h3 class="project__name">Ivan Vazov Apartment</h3><span class="project__num">/ 007</span></div>
-      <div class="project__frame"><img src="assets/projects/ivan-vazov-ap/10325339-10202355471195578-2280659531762075864-n-1.jpg" alt="Ivan Vazov Apartment" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-ivan-vazov-ap.html" data-i18n-project="ivan-vazov-ap" data-title-bg="Ivan Vazov Apartment" data-title-en="Ivan Vazov Apartment" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Ivan Vazov Apartment</h3><span class="project__num">/ 007</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/ivan-vazov-ap/10325339-10202355471195578-2280659531762075864-n-1.jpg" alt="Ivan Vazov Apartment" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2017</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2017</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-john-galliano-office-sofia.html">
-      <div class="project__info"><h3 class="project__name">John Galliano Office Sofia</h3><span class="project__num">/ 008</span></div>
-      <div class="project__frame"><img src="assets/projects/john-galliano-office-sofia/10270810-10202235500596388-1287039187274127482-n-1.jpg" alt="John Galliano Office Sofia" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-john-galliano-office-sofia.html" data-i18n-project="john-galliano-office-sofia" data-title-bg="John Galliano Office Sofia" data-title-en="John Galliano Office Sofia" data-type-bg="Офис" data-type-en="Office" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">John Galliano Office Sofia</h3><span class="project__num">/ 008</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/john-galliano-office-sofia/10270810-10202235500596388-1287039187274127482-n-1.jpg" alt="John Galliano Office Sofia" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Офис</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2016</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Офис</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2016</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-natalie.html">
-      <div class="project__info"><h3 class="project__name">Natalie</h3><span class="project__num">/ 009</span></div>
-      <div class="project__frame"><img src="assets/projects/natalie/img-4854.jpg" alt="Natalie" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-natalie.html" data-i18n-project="natalie" data-title-bg="Natalie" data-title-en="Natalie" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Natalie</h3><span class="project__num">/ 009</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/natalie/img-4854.jpg" alt="Natalie" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2022</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2022</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-office-2.html">
-      <div class="project__info"><h3 class="project__name">Office 2</h3><span class="project__num">/ 010</span></div>
-      <div class="project__frame"><img src="assets/projects/office-2/img-0930.jpg" alt="Office 2" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-office-2.html" data-i18n-project="office-2" data-title-bg="Office 2" data-title-en="Office 2" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Office 2</h3><span class="project__num">/ 010</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/office-2/img-0930.jpg" alt="Office 2" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2021</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2021</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-parsa-sohi.html">
-      <div class="project__info"><h3 class="project__name">Parsa Sohi</h3><span class="project__num">/ 011</span></div>
-      <div class="project__frame"><img src="assets/projects/parsa-sohi/img-8415.jpg" alt="Parsa Sohi" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-parsa-sohi.html" data-i18n-project="parsa-sohi" data-title-bg="Parsa Sohi" data-title-en="Parsa Sohi" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Parsa Sohi</h3><span class="project__num">/ 011</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/parsa-sohi/img-8415.jpg" alt="Parsa Sohi" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2021</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2021</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-pernik-ap.html">
-      <div class="project__info"><h3 class="project__name">Pernik Apartment</h3><span class="project__num">/ 012</span></div>
-      <div class="project__frame"><img src="assets/projects/pernik-ap/10300082-10202235519996873-8635814160687837672-n.jpg" alt="Pernik Apartment" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-pernik-ap.html" data-i18n-project="pernik-ap" data-title-bg="Pernik Apartment" data-title-en="Pernik Apartment" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Pernik Apartment</h3><span class="project__num">/ 012</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/pernik-ap/10300082-10202235519996873-8635814160687837672-n.jpg" alt="Pernik Apartment" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2016</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2016</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-antre-botevgrad.html">
-      <div class="project__info"><h3 class="project__name">Antre Botevgrad</h3><span class="project__num">/ 013</span></div>
-      <div class="project__frame"><img src="assets/projects/antre-botevgrad/dsc-0569.jpg" alt="Antre Botevgrad" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-antre-botevgrad.html" data-i18n-project="antre-botevgrad" data-title-bg="Antre Botevgrad" data-title-en="Antre Botevgrad" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Antre Botevgrad</h3><span class="project__num">/ 013</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/antre-botevgrad/dsc-0569.jpg" alt="Antre Botevgrad" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2015</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2015</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-ap-sofia.html">
-      <div class="project__info"><h3 class="project__name">Apartment Sofia</h3><span class="project__num">/ 014</span></div>
-      <div class="project__frame"><img src="assets/projects/ap-sofia/13100912-10206200104469007-382521690797092918-n.jpg" alt="Apartment Sofia" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-ap-sofia.html" data-i18n-project="ap-sofia" data-title-bg="Apartment Sofia" data-title-en="Apartment Sofia" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Apartment Sofia</h3><span class="project__num">/ 014</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/ap-sofia/13100912-10206200104469007-382521690797092918-n.jpg" alt="Apartment Sofia" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2017</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2017</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-beach-bungaloo.html">
-      <div class="project__info"><h3 class="project__name">Beach Bungaloo</h3><span class="project__num">/ 015</span></div>
-      <div class="project__frame"><img src="assets/projects/beach-bungaloo/accamera1.jpg" alt="Beach Bungaloo" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-beach-bungaloo.html" data-i18n-project="beach-bungaloo" data-title-bg="Beach Bungaloo" data-title-en="Beach Bungaloo" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="Sea" data-location-en="Sea">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Beach Bungaloo</h3><span class="project__num">/ 015</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/beach-bungaloo/accamera1.jpg" alt="Beach Bungaloo" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>Sea</dd></div>
-        <div><dt>Година</dt><dd>2016</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">Sea</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2016</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-black-wood-elegance.html">
-      <div class="project__info"><h3 class="project__name">Black Wood Elegance</h3><span class="project__num">/ 016</span></div>
-      <div class="project__frame"><img src="assets/projects/black-wood-elegance/img-6149.jpg" alt="Black Wood Elegance" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-black-wood-elegance.html" data-i18n-project="black-wood-elegance" data-title-bg="Black Wood Elegance" data-title-en="Black Wood Elegance" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Black Wood Elegance</h3><span class="project__num">/ 016</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/black-wood-elegance/img-6149.jpg" alt="Black Wood Elegance" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2020</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2020</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-delta-hill-house.html">
-      <div class="project__info"><h3 class="project__name">Delta Hill House</h3><span class="project__num">/ 017</span></div>
-      <div class="project__frame"><img src="assets/projects/delta-hill-house/13096128-10206200086548559-801221776577021592-n.jpg" alt="Delta Hill House" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-delta-hill-house.html" data-i18n-project="delta-hill-house" data-title-bg="Delta Hill House" data-title-en="Delta Hill House" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="с. Кладница" data-location-en="Kladnitsa village">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Delta Hill House</h3><span class="project__num">/ 017</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/delta-hill-house/13096128-10206200086548559-801221776577021592-n.jpg" alt="Delta Hill House" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>с. Кладница</dd></div>
-        <div><dt>Година</dt><dd>2014</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">с. Кладница</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2014</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-diamant-2.html">
-      <div class="project__info"><h3 class="project__name">Diamant 2</h3><span class="project__num">/ 018</span></div>
-      <div class="project__frame"><img src="assets/projects/diamant-2/10-2.jpg" alt="Diamant 2" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-diamant-2.html" data-i18n-project="diamant-2" data-title-bg="Diamant 2" data-title-en="Diamant 2" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Diamant 2</h3><span class="project__num">/ 018</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/diamant-2/10-2.jpg" alt="Diamant 2" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2022</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2022</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-grey-white.html">
-      <div class="project__info"><h3 class="project__name">Grey & White</h3><span class="project__num">/ 019</span></div>
-      <div class="project__frame"><img src="assets/projects/grey-white/img-1573.jpg" alt="Grey & White" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-grey-white.html" data-i18n-project="grey-white" data-title-bg="Grey & White" data-title-en="Grey & White" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Grey & White</h3><span class="project__num">/ 019</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/grey-white/img-1573.jpg" alt="Grey & White" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2020</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2020</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-industrial-kitchen.html">
-      <div class="project__info"><h3 class="project__name">Industrial Kitchen</h3><span class="project__num">/ 020</span></div>
-      <div class="project__frame"><img src="assets/projects/industrial-kitchen/img-4433.jpg" alt="Industrial Kitchen" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-industrial-kitchen.html" data-i18n-project="industrial-kitchen" data-title-bg="Industrial Kitchen" data-title-en="Industrial Kitchen" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Industrial Kitchen</h3><span class="project__num">/ 020</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/industrial-kitchen/img-4433.jpg" alt="Industrial Kitchen" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2019</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2019</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-mediteranean.html">
-      <div class="project__info"><h3 class="project__name">Mediteranean</h3><span class="project__num">/ 021</span></div>
-      <div class="project__frame"><img src="assets/projects/mediteranean/img-1451.jpg" alt="Mediteranean" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-mediteranean.html" data-i18n-project="mediteranean" data-title-bg="Mediteranean" data-title-en="Mediteranean" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Mediteranean</h3><span class="project__num">/ 021</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/mediteranean/img-1451.jpg" alt="Mediteranean" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2020</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2020</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-office-kazbek.html">
-      <div class="project__info"><h3 class="project__name">Office Kazbek</h3><span class="project__num">/ 022</span></div>
-      <div class="project__frame"><img src="assets/projects/office-kazbek/accamera1.jpg" alt="Office Kazbek" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-office-kazbek.html" data-i18n-project="office-kazbek" data-title-bg="Office Kazbek" data-title-en="Office Kazbek" data-type-bg="Офис" data-type-en="Office" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Office Kazbek</h3><span class="project__num">/ 022</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/office-kazbek/accamera1.jpg" alt="Office Kazbek" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Офис</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2024</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Офис</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2024</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-white-ap-modern.html">
-      <div class="project__info"><h3 class="project__name">White Apartment Modern</h3><span class="project__num">/ 023</span></div>
-      <div class="project__frame"><img src="assets/projects/white-ap-modern/13178704-10206200122229451-8655324405175875352-n.jpg" alt="White Apartment Modern" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-white-ap-modern.html" data-i18n-project="white-ap-modern" data-title-bg="White Apartment Modern" data-title-en="White Apartment Modern" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">White Apartment Modern</h3><span class="project__num">/ 023</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/white-ap-modern/13178704-10206200122229451-8655324405175875352-n.jpg" alt="White Apartment Modern" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2015</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2015</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-kasa-dragalevtsi.html">
-      <div class="project__info"><h3 class="project__name">House Dragalevtsi</h3><span class="project__num">/ 024</span></div>
-      <div class="project__frame"><img src="assets/projects/kasa-dragalevtsi/36773137-10211872966207005-1403298611697025024-n.jpg" alt="House Dragalevtsi" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-kasa-dragalevtsi.html" data-i18n-project="kasa-dragalevtsi" data-title-bg="House Dragalevtsi" data-title-en="House Dragalevtsi" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">House Dragalevtsi</h3><span class="project__num">/ 024</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/kasa-dragalevtsi/36773137-10211872966207005-1403298611697025024-n.jpg" alt="House Dragalevtsi" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2018</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2018</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-nashiya-ofis.html">
-      <div class="project__info"><h3 class="project__name">Our Office</h3><span class="project__num">/ 025</span></div>
-      <div class="project__frame"><img src="assets/projects/nashiya-ofis/1-1.jpg" alt="Our Office" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-nashiya-ofis.html" data-i18n-project="nashiya-ofis" data-title-bg="Our Office" data-title-en="Our Office" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Our Office</h3><span class="project__num">/ 025</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/nashiya-ofis/1-1.jpg" alt="Our Office" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2024</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2024</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-mezonet-2018.html">
-      <div class="project__info"><h3 class="project__name">Mezonet 2018</h3><span class="project__num">/ 026</span></div>
-      <div class="project__frame"><img src="assets/projects/mezonet-2018/img-0839.jpg" alt="Mezonet 2018" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-mezonet-2018.html" data-i18n-project="mezonet-2018" data-title-bg="Mezonet 2018" data-title-en="Mezonet 2018" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Mezonet 2018</h3><span class="project__num">/ 026</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/mezonet-2018/img-0839.jpg" alt="Mezonet 2018" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2018</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2018</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-kasa-ivanyane.html">
-      <div class="project__info"><h3 class="project__name">къща Иваняне</h3><span class="project__num">/ 027</span></div>
-      <div class="project__frame"><img src="assets/projects/kasa-ivanyane/img-3789.jpg" alt="къща Иваняне" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-kasa-ivanyane.html" data-i18n-project="kasa-ivanyane" data-title-bg="къща Иваняне" data-title-en="House Ivanyane" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="Иваняне" data-location-en="Ivanyane">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">къща Иваняне</h3><span class="project__num">/ 027</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/kasa-ivanyane/img-3789.jpg" alt="къща Иваняне" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>Иваняне</dd></div>
-        <div><dt>Година</dt><dd>2022</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">Иваняне</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2022</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-tropical-clinic.html">
-      <div class="project__info"><h3 class="project__name">Tropical Clinic</h3><span class="project__num">/ 028</span></div>
-      <div class="project__frame"><img src="assets/projects/tropical-clinic/accamera-new-pln.jpg" alt="Tropical Clinic" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-tropical-clinic.html" data-i18n-project="tropical-clinic" data-title-bg="Tropical Clinic" data-title-en="Tropical Clinic" data-type-bg="Обществен обект" data-type-en="Public Space" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Tropical Clinic</h3><span class="project__num">/ 028</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/tropical-clinic/accamera-new-pln.jpg" alt="Tropical Clinic" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Обществен обект</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2022</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Обществен обект</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2022</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-modern-kitchen.html">
-      <div class="project__info"><h3 class="project__name">Modern Kitchen</h3><span class="project__num">/ 029</span></div>
-      <div class="project__frame"><img src="assets/projects/modern-kitchen/13100859-10206200136789815-5432022694496191997-n.jpg" alt="Modern Kitchen" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-modern-kitchen.html" data-i18n-project="modern-kitchen" data-title-bg="Modern Kitchen" data-title-en="Modern Kitchen" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Modern Kitchen</h3><span class="project__num">/ 029</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/modern-kitchen/13100859-10206200136789815-5432022694496191997-n.jpg" alt="Modern Kitchen" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2016</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2016</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-house-sandanski.html">
-      <div class="project__info"><h3 class="project__name">House Sandanski</h3><span class="project__num">/ 030</span></div>
-      <div class="project__frame"><img src="assets/projects/house-sandanski/10419488-10202235496156277-8045356869713387547-n-1.jpg" alt="House Sandanski" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-house-sandanski.html" data-i18n-project="house-sandanski" data-title-bg="House Sandanski" data-title-en="House Sandanski" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="Сандански" data-location-en="Sandanski">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">House Sandanski</h3><span class="project__num">/ 030</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/house-sandanski/10419488-10202235496156277-8045356869713387547-n-1.jpg" alt="House Sandanski" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>Сандански</dd></div>
-        <div><dt>Година</dt><dd>2014</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">Сандански</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2014</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-smolqn-ap.html">
-      <div class="project__info"><h3 class="project__name">Smolqn Apartment</h3><span class="project__num">/ 031</span></div>
-      <div class="project__frame"><img src="assets/projects/smolqn-ap/10325339-10202355471195578-2280659531762075864-n.jpg" alt="Smolqn Apartment" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-smolqn-ap.html" data-i18n-project="smolqn-ap" data-title-bg="Smolqn Apartment" data-title-en="Smolqn Apartment" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="Смолян" data-location-en="Smolyan">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Smolqn Apartment</h3><span class="project__num">/ 031</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/smolqn-ap/10325339-10202355471195578-2280659531762075864-n.jpg" alt="Smolqn Apartment" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>Смолян</dd></div>
-        <div><dt>Година</dt><dd>2015</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">Смолян</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2015</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-mansarda-pod-nebeto.html">
-      <div class="project__info"><h3 class="project__name">Мансарда под небето</h3><span class="project__num">/ 032</span></div>
-      <div class="project__frame"><img src="assets/projects/mansarda-pod-nebeto/15241147-10207711321288483-777873755723524965-n.jpg" alt="Мансарда под небето" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-mansarda-pod-nebeto.html" data-i18n-project="mansarda-pod-nebeto" data-title-bg="Мансарда под небето" data-title-en="Attic under the sky" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Мансарда под небето</h3><span class="project__num">/ 032</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/mansarda-pod-nebeto/15241147-10207711321288483-777873755723524965-n.jpg" alt="Мансарда под небето" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2016</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2016</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-neoclassical-ap.html">
-      <div class="project__info"><h3 class="project__name">Neoclassical Apartment</h3><span class="project__num">/ 033</span></div>
-      <div class="project__frame"><img src="assets/projects/neoclassical-ap/accamera-new1-1.jpg" alt="Neoclassical Apartment" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-neoclassical-ap.html" data-i18n-project="neoclassical-ap" data-title-bg="Neoclassical Apartment" data-title-en="Neoclassical Apartment" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Neoclassical Apartment</h3><span class="project__num">/ 033</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/neoclassical-ap/accamera-new1-1.jpg" alt="Neoclassical Apartment" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2020</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2020</dd></div>
       </dl>
     </a>
-    <a class="project reveal" data-hover href="project-mezonet.html">
-      <div class="project__info"><h3 class="project__name">Мезонет</h3><span class="project__num">/ 034</span></div>
-      <div class="project__frame"><img src="assets/projects/mezonet/22886331-10210239264845492-4264263635687711143-n.jpg" alt="Мезонет" data-parallax="0.06"></div>
+    <a class="project reveal" data-hover href="project-mezonet.html" data-i18n-project="mezonet" data-title-bg="Мезонет" data-title-en="Maisonette" data-type-bg="Жилище" data-type-en="Residential" data-location-bg="София" data-location-en="Sofia">
+      <div class="project__info"><h3 class="project__name" data-i18n-project-field="title">Мезонет</h3><span class="project__num">/ 034</span></div>
+      <div class="project__frame" data-view-text="Виж проекта"><img src="assets/projects/mezonet/22886331-10210239264845492-4264263635687711143-n.jpg" alt="Мезонет" data-parallax="0.06"></div>
       <dl class="project__meta">
-        <div><dt>Тип</dt><dd>Жилище</dd></div>
-        <div><dt>Локация</dt><dd>София</dd></div>
-        <div><dt>Година</dt><dd>2017</dd></div>
+        <div><dt data-i18n="meta_type">Тип</dt><dd data-i18n-project-field="type">Жилище</dd></div>
+        <div><dt data-i18n="meta_location">Локация</dt><dd data-i18n-project-field="location">София</dd></div>
+        <div><dt data-i18n="meta_year">Година</dt><dd>2017</dd></div>
       </dl>
     </a>
     </div>
@@ -376,9 +381,9 @@
 
 <footer class="footer">
   <div class="footer__emails">
-    <div class="footer__email"><span>Запитване</span><a href="mailto:info@design-code.bg" data-hover>info@design-code.bg</a></div>
-    <div class="footer__email"><span>Нови проекти</span><a href="mailto:projects@design-code.bg" data-hover>projects@design-code.bg</a></div>
-    <div class="footer__email"><span>Доставчици</span><a href="mailto:supply@design-code.bg" data-hover>supply@design-code.bg</a></div>
+    <div class="footer__email"><span data-i18n="footer_inquiry">Запитване</span><a href="mailto:info@design-code.bg" data-hover>info@design-code.bg</a></div>
+    <div class="footer__email"><span data-i18n="footer_new_projects">Нови проекти</span><a href="mailto:projects@design-code.bg" data-hover>projects@design-code.bg</a></div>
+    <div class="footer__email"><span data-i18n="footer_suppliers">Доставчици</span><a href="mailto:supply@design-code.bg" data-hover>supply@design-code.bg</a></div>
   </div>
   <div class="footer__mark">
     <img src="assets/logo.png" alt="Design-Code лого">
@@ -386,27 +391,27 @@
   </div>
   <div class="footer__cols">
     <div class="footer__col">
-      <h4>Основно</h4>
-      <a href="projects.html" data-hover>Проекти</a>
-      <a href="index.html#about" data-hover>За нас</a>
-      <a href="contact.html" data-hover>Контакти</a>
-      <a href="questions-and-answers.html" data-hover>Препоръки</a>
+      <h4 data-i18n="footer_main">Основно</h4>
+      <a href="projects.html" data-hover data-i18n="nav_projects">Проекти</a>
+      <a href="index.html#about" data-hover data-i18n="nav_about">За нас</a>
+      <a href="contact.html" data-hover data-i18n="nav_contacts">Контакти</a>
+      <a href="questions-and-answers.html" data-hover data-i18n="nav_recommendations">Препоръки</a>
     </div>
     <div class="footer__col">
-      <h4>Услуги</h4>
-      <a href="index.html#spaces" data-hover>Жилищни</a>
-      <a href="index.html#spaces" data-hover>Хотелиерство</a>
-      <a href="index.html#spaces" data-hover>Търговски</a>
-      <a href="index.html#spaces" data-hover>Спа &amp; Уелнес</a>
+      <h4 data-i18n="footer_services">Услуги</h4>
+      <a href="index.html#spaces" data-hover data-i18n="nav_residential">Жилищни</a>
+      <a href="index.html#spaces" data-hover data-i18n="nav_hospitality">Хотелиерство</a>
+      <a href="index.html#spaces" data-hover data-i18n="nav_commercial">Търговски</a>
+      <a href="index.html#spaces" data-hover data-i18n="nav_spa_wellness">Спа &amp; Уелнес</a>
     </div>
     <div class="footer__col">
-      <h4>Офис</h4>
-      <p>София, България</p>
+      <h4 data-i18n="footer_office">Офис</h4>
+      <p data-i18n="footer_location">София, България</p>
       <a href="tel:+359888123456" data-hover>+359 888 123 456</a>
     </div>
   </div>
   <div class="footer__bottom">
-    <span>© 2026 Design-Code — Интериорен дизайн</span>
+    <span data-i18n="footer_copyright">© 2026 Design-Code — Интериорен дизайн</span>
     <span class="socials">
       <a href="#" data-hover>Instagram</a>
       <a href="#" data-hover>Facebook</a>
@@ -415,6 +420,8 @@
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="project.js"></script>
+<script>i18n.initLanguage();</script>
 </body>
 </html>
