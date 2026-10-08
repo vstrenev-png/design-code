@@ -167,6 +167,17 @@ neoclassical-ap
 mezonet
 ```
 
+## Domain deployment instructions
+
+A dedicated deployment guide was created for the colleague who has access to Vercel and GitHub:
+
+- **File:** `DEPLOY_TO_DOMAIN.md` (in this repo)
+- **Current Vercel project:** `design-code` (`prj_KQSmrFiRSuvG9bdTuUP65T4sH4KU`)
+- **Recommended approach:** Disconnect the current Git repo (`vstrenev-png/design-code`) in Vercel and connect `vstrenev-png/design-code-website` instead, keeping the same Vercel project and domains.
+- **Alternative:** Force-push the new version into the old `design-code` repo (after creating a backup branch).
+
+See `DEPLOY_TO_DOMAIN.md` for full step-by-step commands and post-deploy checks.
+
 ## Key commands
 
 ```bash
@@ -180,6 +191,6 @@ node build.js
 # Local preview
 node server.js
 
-# Deploy
+# Deploy to GitHub Pages test link
 git add -A && git commit -m "..." && git push origin main
 ```
