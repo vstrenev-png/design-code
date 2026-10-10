@@ -213,19 +213,29 @@ img{display:block;max-width:100%}
 .nav__drop-btn .plus{display:inline-block;transition:transform .45s var(--ease);color:var(--accent)}
 .nav__item.open .plus{transform:rotate(45deg)}
 .dropdown{
-  position:absolute;top:100%;left:0;min-width:22rem;
-  background:rgba(14,14,14,.97);backdrop-filter:blur(18px);
-  border:1px solid var(--line);border-top:0;opacity:0;visibility:hidden;transform:translateY(-8px);
+  position:absolute;top:100%;left:0;
+  background:rgba(14,14,14,.98);backdrop-filter:blur(20px);
+  border:1px solid var(--line);border-top:0;
+  opacity:0;visibility:hidden;transform:translateY(-10px);
   transition:.45s var(--ease);
+  display:flex;flex-direction:row;
 }
 .nav__item.open .dropdown{opacity:1;visibility:visible;transform:none}
 .dropdown a{
-  display:flex;align-items:baseline;gap:1.1rem;padding:1.15rem 1.5rem;border:0;border-top:1px solid var(--line);
+  display:flex;align-items:baseline;gap:1.1rem;
+  padding:1.35rem 1.8rem;border:0;border-left:1px solid var(--line);
   font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);
-  transition:color .3s,padding-left .4s var(--ease),background .3s;
+  transition:color .35s,background .35s;
+  white-space:nowrap;
 }
+.dropdown a:first-child{border-left:0}
 .dropdown a i{font-style:normal;font-size:.6rem;color:var(--accent);letter-spacing:.15em}
-.dropdown a:hover{color:var(--text);padding-left:2.1rem;background:rgba(141,198,63,.05)}
+.dropdown a:hover{color:var(--text);background:rgba(141,198,63,.05)}
+@media(max-width:900px){
+  .dropdown{flex-direction:column;min-width:18rem}
+  .dropdown a{border-left:0;border-top:1px solid var(--line);padding:1.15rem 1.5rem}
+  .dropdown a:first-child{border-top:0}
+}
 
 .burger{display:none;flex-direction:column;gap:7px;background:none;border:0;padding:6px;align-self:center}
 .burger span{display:block;width:30px;height:1px;background:var(--text);transition:.4s var(--ease)}
